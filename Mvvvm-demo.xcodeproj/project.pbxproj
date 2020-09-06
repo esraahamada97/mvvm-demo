@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89219B1CEEB8ADD52EE79D89 /* Pods_Mvvvm_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36003942AB0E4E262FB72575 /* Pods_Mvvvm_demo.framework */; };
 		CE1F2E2D2503EF660029F7AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F2E2C2503EF660029F7AC /* AppDelegate.swift */; };
 		CE1F2E2F2503EF660029F7AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F2E2E2503EF660029F7AC /* SceneDelegate.swift */; };
-		CE1F2E312503EF660029F7AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F2E302503EF660029F7AC /* ViewController.swift */; };
-		CE1F2E342503EF660029F7AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1F2E322503EF660029F7AC /* Main.storyboard */; };
 		CE1F2E362503EF680029F7AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1F2E352503EF680029F7AC /* Assets.xcassets */; };
 		CE1F2E392503EF680029F7AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1F2E372503EF680029F7AC /* LaunchScreen.storyboard */; };
+		CE93D1C2250446F70098327B /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93D1C1250446F70098327B /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36003942AB0E4E262FB72575 /* Pods_Mvvvm_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mvvvm_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F44FA842172465A25C4FFD /* Pods-Mvvvm-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mvvvm-demo.debug.xcconfig"; path = "Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1F2E292503EF660029F7AC /* Mvvvm-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mvvvm-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1F2E2C2503EF660029F7AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1F2E2E2503EF660029F7AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE1F2E302503EF660029F7AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE1F2E332503EF660029F7AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE1F2E352503EF680029F7AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE1F2E382503EF680029F7AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE1F2E3A2503EF680029F7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE93D1C1250446F70098327B /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		D59A3D2DE9BB5907C422045F /* Pods-Mvvvm-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mvvvm-demo.release.xcconfig"; path = "Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89219B1CEEB8ADD52EE79D89 /* Pods_Mvvvm_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1202A69624455895BF50FBCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80F44FA842172465A25C4FFD /* Pods-Mvvvm-demo.debug.xcconfig */,
+				D59A3D2DE9BB5907C422045F /* Pods-Mvvvm-demo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE1F2E202503EF660029F7AC = {
 			isa = PBXGroup;
 			children = (
 				CE1F2E2B2503EF660029F7AC /* Mvvvm-demo */,
 				CE1F2E2A2503EF660029F7AC /* Products */,
+				1202A69624455895BF50FBCB /* Pods */,
+				D77232610DB30E9EB2647008 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +71,118 @@
 		CE1F2E2B2503EF660029F7AC /* Mvvvm-demo */ = {
 			isa = PBXGroup;
 			children = (
-				CE1F2E2C2503EF660029F7AC /* AppDelegate.swift */,
-				CE1F2E2E2503EF660029F7AC /* SceneDelegate.swift */,
-				CE1F2E302503EF660029F7AC /* ViewController.swift */,
-				CE1F2E322503EF660029F7AC /* Main.storyboard */,
-				CE1F2E352503EF680029F7AC /* Assets.xcassets */,
-				CE1F2E372503EF680029F7AC /* LaunchScreen.storyboard */,
 				CE1F2E3A2503EF680029F7AC /* Info.plist */,
+				CE1F2E4A2503F4BC0029F7AC /* Utilities */,
+				CE1F2E492503F4A70029F7AC /* Services */,
+				CE1F2E482503F4960029F7AC /* Resources */,
+				CE1F2E472503F4780029F7AC /* NetworkServices */,
+				CE1F2E462503F46E0029F7AC /* Custom */,
+				CE1F2E452503F4530029F7AC /* Extensions */,
+				CE1F2E442503F4490029F7AC /* Base */,
+				CE1F2E432503F4330029F7AC /* StoryBoard */,
+				CE1F2E422503F40C0029F7AC /* Models */,
+				CE1F2E412503F3FB0029F7AC /* Scenes */,
+				CE1F2E402503F3E40029F7AC /* AppDelegate+SceneDelegate */,
 			);
 			path = "Mvvvm-demo";
+			sourceTree = "<group>";
+		};
+		CE1F2E402503F3E40029F7AC /* AppDelegate+SceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CE1F2E2C2503EF660029F7AC /* AppDelegate.swift */,
+				CE1F2E2E2503EF660029F7AC /* SceneDelegate.swift */,
+			);
+			path = "AppDelegate+SceneDelegate";
+			sourceTree = "<group>";
+		};
+		CE1F2E412503F3FB0029F7AC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CE1F2E422503F40C0029F7AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE1F2E432503F4330029F7AC /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				CE1F2E372503EF680029F7AC /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		CE1F2E442503F4490029F7AC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE1F2E452503F4530029F7AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE1F2E462503F46E0029F7AC /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		CE1F2E472503F4780029F7AC /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		CE1F2E482503F4960029F7AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE1F2E4B2503F5360029F7AC /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE1F2E492503F4A70029F7AC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE1F2E4A2503F4BC0029F7AC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CE1F2E4B2503F5360029F7AC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CE93D1C1250446F70098327B /* Assets.swift */,
+				CE1F2E352503EF680029F7AC /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D77232610DB30E9EB2647008 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36003942AB0E4E262FB72575 /* Pods_Mvvvm_demo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1F2E3D2503EF680029F7AC /* Build configuration list for PBXNativeTarget "Mvvvm-demo" */;
 			buildPhases = (
+				E478B176E08DDC4D093787EA /* [CP] Check Pods Manifest.lock */,
 				CE1F2E252503EF660029F7AC /* Sources */,
 				CE1F2E262503EF660029F7AC /* Frameworks */,
 				CE1F2E272503EF660029F7AC /* Resources */,
+				CE1F2E4E2503FA830029F7AC /* swiftgen */,
 			);
 			buildRules = (
 			);
@@ -127,34 +247,68 @@
 			files = (
 				CE1F2E392503EF680029F7AC /* LaunchScreen.storyboard in Resources */,
 				CE1F2E362503EF680029F7AC /* Assets.xcassets in Resources */,
-				CE1F2E342503EF660029F7AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE1F2E4E2503FA830029F7AC /* swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen\n";
+		};
+		E478B176E08DDC4D093787EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mvvvm-demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE1F2E252503EF660029F7AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1F2E312503EF660029F7AC /* ViewController.swift in Sources */,
 				CE1F2E2D2503EF660029F7AC /* AppDelegate.swift in Sources */,
 				CE1F2E2F2503EF660029F7AC /* SceneDelegate.swift in Sources */,
+				CE93D1C2250446F70098327B /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE1F2E322503EF660029F7AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE1F2E332503EF660029F7AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE1F2E372503EF680029F7AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +436,7 @@
 		};
 		CE1F2E3E2503EF680029F7AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F44FA842172465A25C4FFD /* Pods-Mvvvm-demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +455,7 @@
 		};
 		CE1F2E3F2503EF680029F7AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D59A3D2DE9BB5907C422045F /* Pods-Mvvvm-demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
