@@ -1,0 +1,12 @@
+//
+//  Stage.xcconfig
+//  Mvvvm-demo
+//
+//  Created by Esraa Abuseada on 9/6/20.
+//  Copyright © 2020 user. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+BASE_URL = api.themoviedb.org/3
+API_KEY = cb8effcf3a0b27a05a7daba0064a32e1
