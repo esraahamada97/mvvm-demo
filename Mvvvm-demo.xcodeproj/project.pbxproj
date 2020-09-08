@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,26 @@
 		CE4ACDBF2504BB4A00FA9356 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4ACDBE2504BB4A00FA9356 /* Colors.xcassets */; };
 		CE4ACDCC2504C6A100FA9356 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ACDCB2504C6A100FA9356 /* Enviroment.swift */; };
 		CE93D1C2250446F70098327B /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93D1C1250446F70098327B /* Assets.swift */; };
+		CE9BD59625070F03005B9619 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD59525070F03005B9619 /* MovieModel.swift */; };
+		CE9BD59A250713C0005B9619 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD599250713C0005B9619 /* NetworkError.swift */; };
+		CE9BD59C2507156A005B9619 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD59B2507156A005B9619 /* NetworkManager.swift */; };
+		CE9BD59E25071595005B9619 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD59D25071595005B9619 /* NetworkResponse.swift */; };
+		CE9BD5A025071642005B9619 /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD59F25071642005B9619 /* NetworkDefaults.swift */; };
+		CE9BD5A225071667005B9619 /* MoviesDBSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5A125071667005B9619 /* MoviesDBSessionManager.swift */; };
+		CE9BD5A525071775005B9619 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5A325071775005B9619 /* HomeViewController.swift */; };
+		CE9BD5A625071775005B9619 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BD5A425071775005B9619 /* HomeViewController.xib */; };
+		CE9BD5AB2507196F005B9619 /* PopularMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5AA2507196F005B9619 /* PopularMovies.swift */; };
+		CE9BD5AD25071A64005B9619 /* PopularMovies+NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5AC25071A64005B9619 /* PopularMovies+NetworkManager.swift */; };
+		CE9BD5AF25071B12005B9619 /* NetworkManager+ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5AE25071B12005B9619 /* NetworkManager+ParseResponse.swift */; };
+		CE9BD5B1250721EA005B9619 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5B0250721EA005B9619 /* AppDelegate+Extension.swift */; };
+		CE9BD5B325072315005B9619 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5B225072315005B9619 /* Container.swift */; };
+		CE9BD5B52507241C005B9619 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5B42507241C005B9619 /* AppManager.swift */; };
+		CE9BD5B725072674005B9619 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5B625072674005B9619 /* UIView+Extension.swift */; };
+		CE9BD5BA250726C2005B9619 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5B9250726C2005B9619 /* AppNavigationController.swift */; };
+		CE9BD5BD25072723005B9619 /* LoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5BC25072723005B9619 /* LoaderProtocol.swift */; };
+		CE9BD5BF2507272F005B9619 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5BE2507272F005B9619 /* Loader.swift */; };
+		CE9BD5C1250727E8005B9619 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5C0250727E8005B9619 /* BaseViewController.swift */; };
+		CE9BD5C325072889005B9619 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5C225072889005B9619 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +65,26 @@
 		CE4ACDCA2504C4DC00FA9356 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
 		CE4ACDCB2504C6A100FA9356 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		CE93D1C1250446F70098327B /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		CE9BD59525070F03005B9619 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		CE9BD599250713C0005B9619 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CE9BD59B2507156A005B9619 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CE9BD59D25071595005B9619 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		CE9BD59F25071642005B9619 /* NetworkDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDefaults.swift; sourceTree = "<group>"; };
+		CE9BD5A125071667005B9619 /* MoviesDBSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDBSessionManager.swift; sourceTree = "<group>"; };
+		CE9BD5A325071775005B9619 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CE9BD5A425071775005B9619 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		CE9BD5AA2507196F005B9619 /* PopularMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovies.swift; sourceTree = "<group>"; };
+		CE9BD5AC25071A64005B9619 /* PopularMovies+NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularMovies+NetworkManager.swift"; sourceTree = "<group>"; };
+		CE9BD5AE25071B12005B9619 /* NetworkManager+ParseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+ParseResponse.swift"; sourceTree = "<group>"; };
+		CE9BD5B0250721EA005B9619 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
+		CE9BD5B225072315005B9619 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		CE9BD5B42507241C005B9619 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		CE9BD5B625072674005B9619 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		CE9BD5B9250726C2005B9619 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		CE9BD5BC25072723005B9619 /* LoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderProtocol.swift; sourceTree = "<group>"; };
+		CE9BD5BE2507272F005B9619 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		CE9BD5C0250727E8005B9619 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE9BD5C225072889005B9619 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D59A3D2DE9BB5907C422045F /* Pods-Mvvvm-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mvvvm-demo.release.xcconfig"; path = "Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +155,7 @@
 			children = (
 				CE1F2E2C2503EF660029F7AC /* AppDelegate.swift */,
 				CE1F2E2E2503EF660029F7AC /* SceneDelegate.swift */,
+				CE9BD5B0250721EA005B9619 /* AppDelegate+Extension.swift */,
 			);
 			path = "AppDelegate+SceneDelegate";
 			sourceTree = "<group>";
@@ -122,6 +163,7 @@
 		CE1F2E412503F3FB0029F7AC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BD59325070EB0005B9619 /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -129,6 +171,9 @@
 		CE1F2E422503F40C0029F7AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BD59425070ED6005B9619 /* Movie */,
+				CE9BD599250713C0005B9619 /* NetworkError.swift */,
+				CE9BD59D25071595005B9619 /* NetworkResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +189,7 @@
 		CE1F2E442503F4490029F7AC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BD5C0250727E8005B9619 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -151,6 +197,8 @@
 		CE1F2E452503F4530029F7AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BD5B625072674005B9619 /* UIView+Extension.swift */,
+				CE9BD5C225072889005B9619 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +206,8 @@
 		CE1F2E462503F46E0029F7AC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BD5BB2507270E005B9619 /* Loader */,
+				CE9BD5B8250726A8005B9619 /* AppNavigationController */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -165,6 +215,11 @@
 		CE1F2E472503F4780029F7AC /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BD5A825071928005B9619 /* Services */,
+				CE9BD59B2507156A005B9619 /* NetworkManager.swift */,
+				CE9BD59F25071642005B9619 /* NetworkDefaults.swift */,
+				CE9BD5A125071667005B9619 /* MoviesDBSessionManager.swift */,
+				CE9BD5AE25071B12005B9619 /* NetworkManager+ParseResponse.swift */,
 			);
 			path = NetworkServices;
 			sourceTree = "<group>";
@@ -184,6 +239,8 @@
 		CE1F2E492503F4A70029F7AC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BD5B225072315005B9619 /* Container.swift */,
+				CE9BD5B42507241C005B9619 /* AppManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -241,6 +298,57 @@
 			path = Configrations;
 			sourceTree = "<group>";
 		};
+		CE9BD59325070EB0005B9619 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BD5A325071775005B9619 /* HomeViewController.swift */,
+				CE9BD5A425071775005B9619 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CE9BD59425070ED6005B9619 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BD59525070F03005B9619 /* MovieModel.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		CE9BD5A825071928005B9619 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BD5A925071942005B9619 /* PopularMovies */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE9BD5A925071942005B9619 /* PopularMovies */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BD5AA2507196F005B9619 /* PopularMovies.swift */,
+				CE9BD5AC25071A64005B9619 /* PopularMovies+NetworkManager.swift */,
+			);
+			path = PopularMovies;
+			sourceTree = "<group>";
+		};
+		CE9BD5B8250726A8005B9619 /* AppNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BD5B9250726C2005B9619 /* AppNavigationController.swift */,
+			);
+			path = AppNavigationController;
+			sourceTree = "<group>";
+		};
+		CE9BD5BB2507270E005B9619 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BD5BC25072723005B9619 /* LoaderProtocol.swift */,
+				CE9BD5BE2507272F005B9619 /* Loader.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		D77232610DB30E9EB2647008 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +368,9 @@
 				CE1F2E252503EF660029F7AC /* Sources */,
 				CE1F2E262503EF660029F7AC /* Frameworks */,
 				CE1F2E272503EF660029F7AC /* Resources */,
+				E80F7C42D75A8717BC038D00 /* [CP] Embed Pods Frameworks */,
 				CE1F2E4E2503FA830029F7AC /* swiftgen */,
+				CE9BD5A72507178E005B9619 /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -314,6 +424,7 @@
 				CE1F2E362503EF680029F7AC /* Assets.xcassets in Resources */,
 				CE4ACDBF2504BB4A00FA9356 /* Colors.xcassets in Resources */,
 				CE4ACDBB2504BAD300FA9356 /* SFProText-Bold.ttf in Resources */,
+				CE9BD5A625071775005B9619 /* HomeViewController.xib in Resources */,
 				CE4ACDBC2504BAD300FA9356 /* SFProText-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +450,24 @@
 			shellPath = /bin/sh;
 			shellScript = "swiftgen\n";
 		};
+		CE9BD5A72507178E005B9619 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
 		E478B176E08DDC4D093787EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,6 +490,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E80F7C42D75A8717BC038D00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -368,11 +514,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9BD5BA250726C2005B9619 /* AppNavigationController.swift in Sources */,
+				CE9BD59625070F03005B9619 /* MovieModel.swift in Sources */,
+				CE9BD59E25071595005B9619 /* NetworkResponse.swift in Sources */,
+				CE9BD5BF2507272F005B9619 /* Loader.swift in Sources */,
 				CE1F2E2D2503EF660029F7AC /* AppDelegate.swift in Sources */,
+				CE9BD5C1250727E8005B9619 /* BaseViewController.swift in Sources */,
+				CE9BD5AF25071B12005B9619 /* NetworkManager+ParseResponse.swift in Sources */,
+				CE9BD5A225071667005B9619 /* MoviesDBSessionManager.swift in Sources */,
+				CE9BD59C2507156A005B9619 /* NetworkManager.swift in Sources */,
+				CE9BD5C325072889005B9619 /* UIColor+Extension.swift in Sources */,
+				CE9BD5AD25071A64005B9619 /* PopularMovies+NetworkManager.swift in Sources */,
+				CE9BD5BD25072723005B9619 /* LoaderProtocol.swift in Sources */,
+				CE9BD5B325072315005B9619 /* Container.swift in Sources */,
 				CE4ACDB82504B90700FA9356 /* Fonts.swift in Sources */,
 				CE4ACDCC2504C6A100FA9356 /* Enviroment.swift in Sources */,
 				CE4ACDB62504B8FB00FA9356 /* Localized.swift in Sources */,
+				CE9BD59A250713C0005B9619 /* NetworkError.swift in Sources */,
+				CE9BD5B1250721EA005B9619 /* AppDelegate+Extension.swift in Sources */,
+				CE9BD5A025071642005B9619 /* NetworkDefaults.swift in Sources */,
+				CE9BD5B52507241C005B9619 /* AppManager.swift in Sources */,
 				CE1F2E2F2503EF660029F7AC /* SceneDelegate.swift in Sources */,
+				CE9BD5A525071775005B9619 /* HomeViewController.swift in Sources */,
+				CE9BD5AB2507196F005B9619 /* PopularMovies.swift in Sources */,
+				CE9BD5B725072674005B9619 /* UIView+Extension.swift in Sources */,
 				CE93D1C2250446F70098327B /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

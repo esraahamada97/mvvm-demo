@@ -6,5 +6,8 @@ target 'Mvvvm-demo' do
   use_frameworks!
 
   # Pods for Mvvvm-demo
+  pod 'Moya'
+  pod 'AlamofireImage'
+  pod 'MBProgressHUD'
 
 end

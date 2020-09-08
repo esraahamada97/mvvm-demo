@@ -32,7 +32,9 @@ enum Environment {
         guard let rootURLstring = Environment.infoDictionary[Keys.Plist.baseURL] as? String else {
             fatalError("Root URL not set in plist for this environment")
         }
-        let baseUrl = "https://\(rootURLstring)"
+     
+        let baseUrl = "https://api.themoviedb.org/3"
+        //let baseUrl = "https://\(rootURLstring)"
         return baseUrl
     }()
     
