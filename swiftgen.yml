@@ -1,0 +1,24 @@
+input_dir: Mvvvm-demo
+output_dir: Mvvvm-demo
+
+strings:
+    inputs:
+        - Resources/Localization/Localizable.strings
+    outputs:
+        # - templatePath:
+        templateName: structured-swift4
+        output: Resources/Localization/Localized.swift
+
+xcassets:
+    inputs:
+        - Resources/Assets/Assets.xcassets
+    outputs:
+        templateName: swift4
+        output: Resources/Assets/Assets.swift
+
+fonts:
+    inputs: Resources/Fonts
+    outputs:
+        templateName: swift4
+        output: Resources/Fonts/Fonts.swift
+
