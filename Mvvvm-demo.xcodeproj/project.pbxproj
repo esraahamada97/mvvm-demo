@@ -40,6 +40,9 @@
 		CE9BD5BF2507272F005B9619 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5BE2507272F005B9619 /* Loader.swift */; };
 		CE9BD5C1250727E8005B9619 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5C0250727E8005B9619 /* BaseViewController.swift */; };
 		CE9BD5C325072889005B9619 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD5C225072889005B9619 /* UIColor+Extension.swift */; };
+		CEA891872508D0270000D32E /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA891862508D0270000D32E /* Binding.swift */; };
+		CEA8918D2508D0DD0000D32E /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8918C2508D0DD0000D32E /* HomeWireframe.swift */; };
+		CEA8918F2508D27D0000D32E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8918E2508D27D0000D32E /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +88,9 @@
 		CE9BD5BE2507272F005B9619 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		CE9BD5C0250727E8005B9619 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE9BD5C225072889005B9619 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		CEA891862508D0270000D32E /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		CEA8918C2508D0DD0000D32E /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		CEA8918E2508D27D0000D32E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D59A3D2DE9BB5907C422045F /* Pods-Mvvvm-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mvvvm-demo.release.xcconfig"; path = "Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +254,7 @@
 		CE1F2E4A2503F4BC0029F7AC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CEA891862508D0270000D32E /* Binding.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -301,8 +308,9 @@
 		CE9BD59325070EB0005B9619 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CE9BD5A325071775005B9619 /* HomeViewController.swift */,
-				CE9BD5A425071775005B9619 /* HomeViewController.xib */,
+				CEA891892508D06A0000D32E /* ViewModel */,
+				CEA891882508D0530000D32E /* View */,
+				CEA8918C2508D0DD0000D32E /* HomeWireframe.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -347,6 +355,23 @@
 				CE9BD5BE2507272F005B9619 /* Loader.swift */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		CEA891882508D0530000D32E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BD5A325071775005B9619 /* HomeViewController.swift */,
+				CE9BD5A425071775005B9619 /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEA891892508D06A0000D32E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8918E2508D27D0000D32E /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D77232610DB30E9EB2647008 /* Frameworks */ = {
@@ -521,6 +546,7 @@
 				CE1F2E2D2503EF660029F7AC /* AppDelegate.swift in Sources */,
 				CE9BD5C1250727E8005B9619 /* BaseViewController.swift in Sources */,
 				CE9BD5AF25071B12005B9619 /* NetworkManager+ParseResponse.swift in Sources */,
+				CEA891872508D0270000D32E /* Binding.swift in Sources */,
 				CE9BD5A225071667005B9619 /* MoviesDBSessionManager.swift in Sources */,
 				CE9BD59C2507156A005B9619 /* NetworkManager.swift in Sources */,
 				CE9BD5C325072889005B9619 /* UIColor+Extension.swift in Sources */,
@@ -529,12 +555,14 @@
 				CE9BD5B325072315005B9619 /* Container.swift in Sources */,
 				CE4ACDB82504B90700FA9356 /* Fonts.swift in Sources */,
 				CE4ACDCC2504C6A100FA9356 /* Enviroment.swift in Sources */,
+				CEA8918D2508D0DD0000D32E /* HomeWireframe.swift in Sources */,
 				CE4ACDB62504B8FB00FA9356 /* Localized.swift in Sources */,
 				CE9BD59A250713C0005B9619 /* NetworkError.swift in Sources */,
 				CE9BD5B1250721EA005B9619 /* AppDelegate+Extension.swift in Sources */,
 				CE9BD5A025071642005B9619 /* NetworkDefaults.swift in Sources */,
 				CE9BD5B52507241C005B9619 /* AppManager.swift in Sources */,
 				CE1F2E2F2503EF660029F7AC /* SceneDelegate.swift in Sources */,
+				CEA8918F2508D27D0000D32E /* HomeViewModel.swift in Sources */,
 				CE9BD5A525071775005B9619 /* HomeViewController.swift in Sources */,
 				CE9BD5AB2507196F005B9619 /* PopularMovies.swift in Sources */,
 				CE9BD5B725072674005B9619 /* UIView+Extension.swift in Sources */,

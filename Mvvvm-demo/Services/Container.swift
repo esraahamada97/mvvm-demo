@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class Container {
-
+  
     class func getHomeViewController() -> UIViewController {
-        let viewController = HomeViewController()
+        let viewController = HomeModule.createModule()
         return viewController
     }
 
