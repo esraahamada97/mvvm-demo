@@ -33,8 +33,7 @@ enum Environment {
             fatalError("Root URL not set in plist for this environment")
         }
      
-        let baseUrl = "https://api.themoviedb.org/3"
-        //let baseUrl = "https://\(rootURLstring)"
+    let baseUrl = "https://\(rootURLstring)"
         return baseUrl
     }()
     

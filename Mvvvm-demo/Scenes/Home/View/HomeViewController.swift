@@ -17,19 +17,21 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
         homeViewModel?.movies?.bind { [weak self] movies in
-             self?.moviesList = movies
-            print("essssss", self?.moviesList)
-           }
-       
+            self?.moviesList = movies
+           // print("essssss", self?.moviesList)
+        }
+        homeViewModel?.fetchMovies()
     }
     
-    init(viewModel: HomeViewModel, nibName: String) {
+    init(viewModel: HomeViewModel) {
         self.homeViewModel = viewModel
-        super.init(nibName: nibName, bundle: nil)
+        super.init(nibName: nil, bundle: nil)
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
 }

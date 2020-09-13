@@ -10,7 +10,8 @@ import Foundation
 
 struct NetworkResponse<T: Codable>: Codable {
     let page: Int?
-    let results: [T]?
+    // T for one object
+    let results: T?
     let totalPages: Int?
     let totalResults: Int?
     

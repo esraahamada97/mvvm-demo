@@ -11,11 +11,9 @@ import UIKit
 
 class HomeModule {
 
-    class func createModule() -> UIViewController {
+    class func createModule(viewModel: HomeViewModel) -> UIViewController {
         
-        let viewModel = HomeViewModel()
-        
-        let view = HomeViewController(viewModel: viewModel, nibName: "HomeViewController")
+        let view = HomeViewController(viewModel: viewModel)
         return view
 
     }

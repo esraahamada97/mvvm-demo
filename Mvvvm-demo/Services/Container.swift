@@ -11,8 +11,8 @@ import UIKit
 
 class Container {
   
-    class func getHomeViewController() -> UIViewController {
-        let viewController = HomeModule.createModule()
+    class func getHomeViewController(viewModel: HomeViewModel = HomeViewModel()) -> UIViewController {
+        let viewController = HomeModule.createModule(viewModel: viewModel)
         return viewController
     }
 

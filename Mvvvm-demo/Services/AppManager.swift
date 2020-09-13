@@ -39,7 +39,10 @@ class AppManager: NSObject {
    @available(iOS 13.0, *)
    static func initWindow(windowScene: UIWindowScene) {
        let window = UIWindow(windowScene: windowScene)
-       let viewController = Container.getHomeViewController()
+    // send homeVieModel of this vc
+   // Container.getHomeViewController(viewModel: self.viewModel)
+    // send initialized homeview model objec
+    let viewController = Container.getHomeViewController()
        window.rootViewController = viewController
        window.makeKeyAndVisible()
        self.shared.window = window
