@@ -31,7 +31,7 @@ class HomeViewModel: HomeViewModelProtocol {
                     print("error \(error)")
                     self.moviesError?.value = error
                 }
-        }
+            }
     }
     
     func fetchMovieDetails(movieId: Int) {
@@ -45,7 +45,7 @@ class HomeViewModel: HomeViewModelProtocol {
                     print("error \(error)")
                     self.movieDetailsError?.value = error
                 }
-        }
+            }
     }
     
     init() {

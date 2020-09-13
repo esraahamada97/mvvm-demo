@@ -17,14 +17,17 @@ class HomeViewController: BaseViewController {
     
     // MARK: - Public Variables
     // MARK: - IBOutletes
+    @IBOutlet private weak var moviesCollectionView: UICollectionView!
     
     // MARK: - View controller lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        setCollectionView()
         fireMoviesListeners()
         fireMoviesDetailsListeners()
+        requestData()
     }
     
     init(viewModel: HomeViewModel) {
@@ -55,6 +58,7 @@ extension HomeViewController {
         homeViewModel?.movies?.bind { [weak self] movies in
             self?.hideLoader()
             self?.moviesList = movies
+            self?.moviesCollectionView.reloadData()
         }
     }
     
@@ -81,13 +85,80 @@ extension HomeViewController {
             self?.showError(message: error.message ?? "")
         }
     }
+    
+    private func setCollectionView() {
+           
+           moviesCollectionView.dataSource = self
+           moviesCollectionView.delegate = self
+           
+           moviesCollectionView.register(
+            UINib(nibName: MovieCell.className,
+                  bundle: nil),
+            forCellWithReuseIdentifier: MovieCell.className)
+           }
 }
 
 // MARK: - Public
 extension HomeViewController {}
 
 // MARK: - IBAction
-extension HomeViewController{}
+extension HomeViewController {
+    
+}
 
 // MARK: - Delegates
-extension HomeViewController{}
+extension HomeViewController: UICollectionViewDataSource {
+      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            
+            return moviesList?.count ?? 0
+        }
+        
+        func collectionView(_ collectionView: UICollectionView,
+                            cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            guard let cell = collectionView
+                .dequeueReusableCell(
+                    withReuseIdentifier: MovieCell.className,
+                    for: indexPath) as? MovieCell else {
+                        return UICollectionViewCell() }
+            guard let movie = moviesList?[indexPath.row] else {
+                return UICollectionViewCell()
+            }
+            
+            cell.bind(movie: movie)
+            return cell
+        }
+        
+        func collectionView(_ collectionView: UICollectionView,
+                            layout collectionViewLayout: UICollectionViewLayout,
+                            referenceSizeForHeaderInSection section: Int) -> CGSize {
+            return CGSize(width: collectionView.frame.width, height: 48)
+        }
+    
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionViewSize = collectionView.frame.size.width - 31
+        return CGSize(width: collectionViewSize / 2, height: 338)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+}
