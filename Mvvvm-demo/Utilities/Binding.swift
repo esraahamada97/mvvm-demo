@@ -23,7 +23,7 @@ final class Binding<T> {
     }
     
     //3
-      init(_ value: T) {
+      init(_ value: T?) {
         self.value = value
       }
     

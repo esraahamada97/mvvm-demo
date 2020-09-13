@@ -78,8 +78,8 @@
             filePath = "Mvvvm-demo/NetworkServices/Services/PopularMovies/PopularMovies+NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "getPopularMovies(page:completion:)"
             landmarkType = "7">
             <Locations>
@@ -216,7 +216,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "46EBA579-7B21-4D2F-BC55-8BE354D9E323"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mvvvm-demo/Resources/Configrations/Enviroment.swift"
@@ -342,54 +342,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "950CA027-176D-4AB2-BEC3-B10BD025F91D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mvvvm-demo/Models/NetworkResponse.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "totalPages"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "950CA027-176D-4AB2-BEC3-B10BD025F91D - fa929eaf513972e1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mvvvm_demo.NetworkResponse.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Mvvvm_demo.NetworkResponse&lt;A&gt;.CodingKeys&gt;"
-                  moduleName = "Mvvvm-demo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/NetworkResponse.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "105">
-               </Location>
-               <Location
-                  uuid = "950CA027-176D-4AB2-BEC3-B10BD025F91D - 8fbdfb5a6dff1390"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mvvvm_demo.NetworkResponse.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "Mvvvm-demo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/NetworkResponse.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "51EB8528-6B90-497D-B49C-CB8A893DEC8F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -397,8 +349,8 @@
             filePath = "Mvvvm-demo/Scenes/Home/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "fetchMovies()"
             landmarkType = "7">
          </BreakpointContent>
@@ -413,8 +365,8 @@
             filePath = "Mvvvm-demo/Scenes/Home/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "fetchMovies()"
             landmarkType = "7">
          </BreakpointContent>
@@ -429,25 +381,9 @@
             filePath = "Mvvvm-demo/Scenes/Home/View/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "init(viewModel:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8CCD1656-A1DC-4019-83DC-9BF426465FAC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mvvvm-demo/Scenes/Home/View/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -470,38 +406,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B1EAD6E4-5F34-4B87-A9D4-831A7E3DCCE9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mvvvm-demo/Scenes/Home/View/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D8A30EB5-9A11-4DA0-80DF-40EEF73E4C00"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mvvvm-demo/Scenes/Home/View/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1B6CD243-B0EE-4B96-8C73-6B433B7BEB10"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -509,8 +413,8 @@
             filePath = "Mvvvm-demo/Scenes/Home/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "fetchMovies()"
             landmarkType = "7">
          </BreakpointContent>
@@ -525,55 +429,55 @@
             filePath = "Mvvvm-demo/Scenes/Home/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "fetchMovies()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "BCA556EF-7B76-4BB6-AE0F-0BCA88A6109E - 953b7ced4f1ff79e"
+                  uuid = "BCA556EF-7B76-4BB6-AE0F-0BCA88A6109E - 8f428e98f00dbd98"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Mvvvm_demo.NetworkResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Mvvvm_demo.HomeViewModel.fetchMovies() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Mvvvm_demo.MovieListsResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Mvvvm_demo.HomeViewModel.fetchMovies() -&gt; ()"
                   moduleName = "Mvvvm-demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Scenes/Home/ViewModel/HomeViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
                   offsetFromSymbolStart = "156">
                </Location>
                <Location
-                  uuid = "BCA556EF-7B76-4BB6-AE0F-0BCA88A6109E - 953b7ced4f1ff79e"
+                  uuid = "BCA556EF-7B76-4BB6-AE0F-0BCA88A6109E - 8f428e98f00dbd98"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Mvvvm_demo.NetworkResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Mvvvm_demo.HomeViewModel.fetchMovies() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Mvvvm_demo.MovieListsResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Mvvvm_demo.HomeViewModel.fetchMovies() -&gt; ()"
                   moduleName = "Mvvvm-demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Scenes/Home/ViewModel/HomeViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
                   offsetFromSymbolStart = "181">
                </Location>
                <Location
-                  uuid = "BCA556EF-7B76-4BB6-AE0F-0BCA88A6109E - 953b7ced4f1ff79e"
+                  uuid = "BCA556EF-7B76-4BB6-AE0F-0BCA88A6109E - 8f428e98f00dbd98"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Mvvvm_demo.NetworkResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Mvvvm_demo.HomeViewModel.fetchMovies() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Mvvvm_demo.MovieListsResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Mvvvm_demo.HomeViewModel.fetchMovies() -&gt; ()"
                   moduleName = "Mvvvm-demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Scenes/Home/ViewModel/HomeViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "558">
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "470">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -630,45 +534,45 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E5186494-CEBB-43E9-ADAB-01D46D60E799"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mvvvm-demo/NetworkServices/Services/PopularMovies/PopularMovies+NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "getPopularMovies(page:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E5186494-CEBB-43E9-ADAB-01D46D60E799 - fe730fe2c431af4d"
+                  uuid = "E5186494-CEBB-43E9-ADAB-01D46D60E799 - be7389c1670b5c49"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Mvvvm_demo.NetworkManager.getPopularMovies(page: Swift.Int, completion: (Swift.Result&lt;Mvvvm_demo.NetworkResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Mvvvm_demo.NetworkManager.getPopularMovies(page: Swift.Int, completion: (Swift.Result&lt;Mvvvm_demo.MovieListsResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Mvvvm-demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/NetworkServices/Services/PopularMovies/PopularMovies+NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
                   offsetFromSymbolStart = "171">
                </Location>
                <Location
-                  uuid = "E5186494-CEBB-43E9-ADAB-01D46D60E799 - 26f68d20f739beac"
+                  uuid = "E5186494-CEBB-43E9-ADAB-01D46D60E799 - 7f00f8c8f987fb29"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in Mvvvm_demo.NetworkManager.getPopularMovies(page: Swift.Int, completion: (Swift.Result&lt;Mvvvm_demo.NetworkResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in Mvvvm_demo.NetworkManager.getPopularMovies(page: Swift.Int, completion: (Swift.Result&lt;Mvvvm_demo.MovieListsResponse&lt;Swift.Array&lt;Mvvvm_demo.MovieModel&gt;&gt;, Mvvvm_demo.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Mvvvm-demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/NetworkServices/Services/PopularMovies/PopularMovies+NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
                   offsetFromSymbolStart = "95">
                </Location>
             </Locations>
@@ -678,7 +582,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "436E3284-64E2-4BC2-B2C7-5FBD6C00E686"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mvvvm-demo/Resources/Configrations/Enviroment.swift"
@@ -688,6 +592,230 @@
             endingLineNumber = "43"
             landmarkName = "apiKey"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD8FA29D-73E4-4102-97BA-49C8D9CD983A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mvvvm-demo/Scenes/Home/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchMovieDetails(movieId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F515D0BE-8068-4DDD-949B-19C8F637AEC9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mvvvm-demo/Models/Movie/MovieModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "F515D0BE-8068-4DDD-949B-19C8F637AEC9 - 2358ea77af132001"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mvvvm_demo.MovieModel.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Mvvvm_demo.MovieModel.CodingKeys&gt;"
+                  moduleName = "Mvvvm-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/Movie/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "F515D0BE-8068-4DDD-949B-19C8F637AEC9 - a9c3e5a6552e280d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mvvvm_demo.MovieModel.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "Mvvvm-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/Movie/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A0B7F9D-F606-4B59-9F9C-F66A3D2F1D83"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mvvvm-demo/Models/Movie/MovieModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "MovieModel"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "6A0B7F9D-F606-4B59-9F9C-F66A3D2F1D83 - 2358ea77af132001"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mvvvm_demo.MovieModel.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Mvvvm_demo.MovieModel.CodingKeys&gt;"
+                  moduleName = "Mvvvm-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/Movie/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "6A0B7F9D-F606-4B59-9F9C-F66A3D2F1D83 - a9c3e5a6552e280d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mvvvm_demo.MovieModel.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "Mvvvm-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/Movie/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D783F649-3BFF-45C8-9137-3DD2A60B0DC2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mvvvm-demo/Models/Movie/MovieModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "MovieModel"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "D783F649-3BFF-45C8-9137-3DD2A60B0DC2 - 2358ea77af132001"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mvvvm_demo.MovieModel.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Mvvvm_demo.MovieModel.CodingKeys&gt;"
+                  moduleName = "Mvvvm-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/Movie/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "D783F649-3BFF-45C8-9137-3DD2A60B0DC2 - a9c3e5a6552e280d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mvvvm_demo.MovieModel.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "Mvvvm-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/Movie/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98D79DA8-614F-4DA1-9C79-DA1FFE5D7A52"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mvvvm-demo/Models/Movie/MovieModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "MovieModel"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "98D79DA8-614F-4DA1-9C79-DA1FFE5D7A52 - 2358ea77af132001"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mvvvm_demo.MovieModel.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Mvvvm_demo.MovieModel.CodingKeys&gt;"
+                  moduleName = "Mvvvm-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/Movie/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "98D79DA8-614F-4DA1-9C79-DA1FFE5D7A52 - a9c3e5a6552e280d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mvvvm_demo.MovieModel.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "Mvvvm-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Developer/Mvvvm-demo/Mvvvm-demo/Models/Movie/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9AB0074-2BCE-461F-8580-D58326BDAE61"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mvvvm-demo/NetworkServices/Services/MovieDetailsService/MovieDetailsService + NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getMovieDetails(movieId:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

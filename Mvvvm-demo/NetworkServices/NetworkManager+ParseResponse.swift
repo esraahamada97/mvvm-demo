@@ -17,7 +17,7 @@ extension NetworkManager {
             
             if (200...299 ~= response.statusCode) {
                 do {
-                    let result = try JSONDecoder().decode(NetworkResponse<T>.self, from: response.data)
+                    let result = try JSONDecoder().decode(T.self, from: response.data)
                     
                     completion(.success(result), response.statusCode)
                 } catch {

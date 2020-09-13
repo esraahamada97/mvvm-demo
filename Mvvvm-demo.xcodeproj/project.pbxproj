@@ -19,6 +19,11 @@
 		CE4ACDBC2504BAD300FA9356 /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE4ACDBA2504BAD300FA9356 /* SFProText-Medium.ttf */; };
 		CE4ACDBF2504BB4A00FA9356 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4ACDBE2504BB4A00FA9356 /* Colors.xcassets */; };
 		CE4ACDCC2504C6A100FA9356 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ACDCB2504C6A100FA9356 /* Enviroment.swift */; };
+		CE59CD70250DEB8E00787677 /* MovieListsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59CD6F250DEB8E00787677 /* MovieListsResponse.swift */; };
+		CE59CD73250DEF6C00787677 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59CD72250DEF6C00787677 /* MovieDetails.swift */; };
+		CE59CD75250DEF7600787677 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59CD74250DEF7600787677 /* Genres.swift */; };
+		CE59CD78250DF04C00787677 /* MovieDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59CD77250DF04C00787677 /* MovieDetailsService.swift */; };
+		CE59CD7A250DF07200787677 /* MovieDetailsService + NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59CD79250DF07200787677 /* MovieDetailsService + NetworkManager.swift */; };
 		CE93D1C2250446F70098327B /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93D1C1250446F70098327B /* Assets.swift */; };
 		CE9BD59625070F03005B9619 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD59525070F03005B9619 /* MovieModel.swift */; };
 		CE9BD59A250713C0005B9619 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD599250713C0005B9619 /* NetworkError.swift */; };
@@ -67,6 +72,11 @@
 		CE4ACDC92504C4CD00FA9356 /* Live.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Live.xcconfig; sourceTree = "<group>"; };
 		CE4ACDCA2504C4DC00FA9356 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
 		CE4ACDCB2504C6A100FA9356 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		CE59CD6F250DEB8E00787677 /* MovieListsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListsResponse.swift; sourceTree = "<group>"; };
+		CE59CD72250DEF6C00787677 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		CE59CD74250DEF7600787677 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
+		CE59CD77250DF04C00787677 /* MovieDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsService.swift; sourceTree = "<group>"; };
+		CE59CD79250DF07200787677 /* MovieDetailsService + NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieDetailsService + NetworkManager.swift"; sourceTree = "<group>"; };
 		CE93D1C1250446F70098327B /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		CE9BD59525070F03005B9619 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		CE9BD599250713C0005B9619 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -177,9 +187,11 @@
 		CE1F2E422503F40C0029F7AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE59CD71250DEF5600787677 /* MovieDetails */,
 				CE9BD59425070ED6005B9619 /* Movie */,
 				CE9BD599250713C0005B9619 /* NetworkError.swift */,
 				CE9BD59D25071595005B9619 /* NetworkResponse.swift */,
+				CE59CD6F250DEB8E00787677 /* MovieListsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,6 +317,24 @@
 			path = Configrations;
 			sourceTree = "<group>";
 		};
+		CE59CD71250DEF5600787677 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CE59CD72250DEF6C00787677 /* MovieDetails.swift */,
+				CE59CD74250DEF7600787677 /* Genres.swift */,
+			);
+			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		CE59CD76250DF02E00787677 /* MovieDetailsService */ = {
+			isa = PBXGroup;
+			children = (
+				CE59CD77250DF04C00787677 /* MovieDetailsService.swift */,
+				CE59CD79250DF07200787677 /* MovieDetailsService + NetworkManager.swift */,
+			);
+			path = MovieDetailsService;
+			sourceTree = "<group>";
+		};
 		CE9BD59325070EB0005B9619 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +356,7 @@
 		CE9BD5A825071928005B9619 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CE59CD76250DF02E00787677 /* MovieDetailsService */,
 				CE9BD5A925071942005B9619 /* PopularMovies */,
 			);
 			path = Services;
@@ -549,10 +580,14 @@
 				CEA891872508D0270000D32E /* Binding.swift in Sources */,
 				CE9BD5A225071667005B9619 /* MoviesDBSessionManager.swift in Sources */,
 				CE9BD59C2507156A005B9619 /* NetworkManager.swift in Sources */,
+				CE59CD75250DEF7600787677 /* Genres.swift in Sources */,
+				CE59CD78250DF04C00787677 /* MovieDetailsService.swift in Sources */,
 				CE9BD5C325072889005B9619 /* UIColor+Extension.swift in Sources */,
 				CE9BD5AD25071A64005B9619 /* PopularMovies+NetworkManager.swift in Sources */,
 				CE9BD5BD25072723005B9619 /* LoaderProtocol.swift in Sources */,
+				CE59CD7A250DF07200787677 /* MovieDetailsService + NetworkManager.swift in Sources */,
 				CE9BD5B325072315005B9619 /* Container.swift in Sources */,
+				CE59CD70250DEB8E00787677 /* MovieListsResponse.swift in Sources */,
 				CE4ACDB82504B90700FA9356 /* Fonts.swift in Sources */,
 				CE4ACDCC2504C6A100FA9356 /* Enviroment.swift in Sources */,
 				CEA8918D2508D0DD0000D32E /* HomeWireframe.swift in Sources */,
@@ -561,6 +596,7 @@
 				CE9BD5B1250721EA005B9619 /* AppDelegate+Extension.swift in Sources */,
 				CE9BD5A025071642005B9619 /* NetworkDefaults.swift in Sources */,
 				CE9BD5B52507241C005B9619 /* AppManager.swift in Sources */,
+				CE59CD73250DEF6C00787677 /* MovieDetails.swift in Sources */,
 				CE1F2E2F2503EF660029F7AC /* SceneDelegate.swift in Sources */,
 				CEA8918F2508D27D0000D32E /* HomeViewModel.swift in Sources */,
 				CE9BD5A525071775005B9619 /* HomeViewController.swift in Sources */,

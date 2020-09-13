@@ -14,27 +14,45 @@ protocol HomeViewModelProtocol: class {
 }
 
 class HomeViewModel: HomeViewModelProtocol {
-  
-//    let movieObject = MovieModel(movieID: 0, title: "", posterPath: "", originalTitle: "")
     
     var movies: Binding<[MovieModel]>?
+    var moviesError: Binding<NetworkError>?
+    var movieDetails: Binding<MovieDetails>?
+    var movieDetailsError: Binding<NetworkError>?
     
-        func fetchMovies() {
-            NetworkManager.shared
-            .getPopularMovies(page: 1) { ( result: Result<NetworkResponse<[MovieModel]>, NetworkError>, _) in
+    func fetchMovies() {
+        NetworkManager.shared
+            .getPopularMovies(page: 1) { ( result: Result<MovieListsResponse<[MovieModel]>, NetworkError>, _) in
                 switch result {
                 case .success(let listData):
                     //self.movies = Binding(listData.results ?? [])
-                    self.movies?.value = listData.results ?? []
+                    self.movies?.value = listData.results
                 case .failure(let error):
                     print("error \(error)")
+                    self.moviesError?.value = error
                 }
-            }
         }
+    }
+    
+    func fetchMovieDetails(movieId: Int) {
+        NetworkManager.shared
+            .getMovieDetails(movieId: movieId) { ( result: Result<MovieDetails, NetworkError>, _) in
+                switch result {
+                case .success(let listData):
+                    //self.movies = Binding(listData.results ?? [])
+                    self.movieDetails?.value = listData
+                case .failure(let error):
+                    print("error \(error)")
+                    self.movieDetailsError?.value = error
+                }
+        }
+    }
     
     init() {
         movies = Binding([])
-      //fetchMovies()
+        movieDetails = Binding(nil)
+        moviesError = Binding(nil)
+        movieDetailsError = Binding(nil)
     }
     
 }

@@ -12,7 +12,9 @@ import Moya
 extension NetworkManager {
     
     func getPopularMovies(page: Int,
-                          completion: @escaping(_ result: Swift.Result<NetworkResponse<[MovieModel]>, NetworkError>,
+                          completion: @escaping(
+        _ result: Swift.Result<MovieListsResponse<[MovieModel]>,
+        NetworkError>,
         _ statusCode: Int?) -> Void) {
         
         provider.request(MultiTarget(PopularMoviesService.getPopularMovies(page: page))) { result in
