@@ -8,21 +8,16 @@
 
 import Foundation
 
-protocol HomeViewModelProtocol: class {
-    
-    func fetchMovies()
-}
-
-class HomeViewModel: HomeViewModelProtocol {
+class HomeViewModel {
     
     var movies: Binding<[MovieModel]>?
     var moviesError: Binding<NetworkError>?
     var movieDetails: Binding<MovieDetails>?
     var movieDetailsError: Binding<NetworkError>?
     
-    func fetchMovies() {
+    func fetchMovies(page: Int) {
         NetworkManager.shared
-            .getPopularMovies(page: 1) { ( result: Result<MovieListsResponse<[MovieModel]>, NetworkError>, _) in
+            .getPopularMovies(page: page) { ( result: Result<MovieListsResponse<[MovieModel]>, NetworkError>, _) in
                 switch result {
                 case .success(let listData):
                     //self.movies = Binding(listData.results ?? [])

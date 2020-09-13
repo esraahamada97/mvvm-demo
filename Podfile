@@ -4,10 +4,10 @@
 target 'Mvvvm-demo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for Mvvvm-demo
   pod 'Moya'
   pod 'AlamofireImage'
   pod 'MBProgressHUD'
-
+  pod 'SwiftPullToRefresh'
 end

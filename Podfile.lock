@@ -7,11 +7,13 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - SwiftPullToRefresh (3.1.1)
 
 DEPENDENCIES:
   - AlamofireImage
   - MBProgressHUD
   - Moya
+  - SwiftPullToRefresh
 
 SPEC REPOS:
   trunk:
@@ -19,13 +21,15 @@ SPEC REPOS:
     - AlamofireImage
     - MBProgressHUD
     - Moya
+    - SwiftPullToRefresh
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  SwiftPullToRefresh: f61d67439c5b8d66420fe57193cab8c279398e7a
 
-PODFILE CHECKSUM: 024ee60b5881728ec92e9505c45d1d637548c59d
+PODFILE CHECKSUM: 906beb5005b6102c67aa50f9a77c569591813448
 
 COCOAPODS: 1.9.3

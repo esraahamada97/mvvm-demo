@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftPullToRefresh
 
 class HomeViewController: BaseViewController {
     
@@ -18,6 +19,15 @@ class HomeViewController: BaseViewController {
     // MARK: - Public Variables
     // MARK: - IBOutletes
     @IBOutlet private weak var moviesCollectionView: UICollectionView!
+    
+    // MARK: - Computed Variables
+       lazy var refreshControl: UIRefreshControl = {
+           let refreshControl = UIRefreshControl()
+           refreshControl.addTarget(self,
+                                    action: #selector(handlePullToRefresh(_:)),
+                                    for: UIControl.Event.valueChanged)
+           return refreshControl
+       }()
     
     // MARK: - View controller lifecycle methods
     override func viewDidLoad() {
@@ -45,7 +55,7 @@ class HomeViewController: BaseViewController {
 extension HomeViewController {
     private func requestData() {
         showLoader(view: self.view, type: .native)
-        homeViewModel?.fetchMovies()
+        homeViewModel?.fetchMovies(page: 1)
         homeViewModel?.fetchMovieDetails(movieId: 505)
     }
     
@@ -57,8 +67,15 @@ extension HomeViewController {
     private func fetchMoviesSucces() {
         homeViewModel?.movies?.bind { [weak self] movies in
             self?.hideLoader()
-            self?.moviesList = movies
-            self?.moviesCollectionView.reloadData()
+            self?.moviesCollectionView.spr_endRefreshing()
+            self?.refreshControl.endRefreshing()
+            UIView.animate(withDuration: 0.2, animations: {
+                self?.moviesList = []
+                self?.moviesCollectionView.reloadData()
+            }, completion: { _ in
+                self?.moviesList = movies
+                self?.moviesCollectionView.reloadData()
+            })
         }
     }
     
@@ -95,7 +112,16 @@ extension HomeViewController {
             UINib(nibName: MovieCell.className,
                   bundle: nil),
             forCellWithReuseIdentifier: MovieCell.className)
+        
+        moviesCollectionView.refreshControl = refreshControl
            }
+    
+    @objc
+       private func handlePullToRefresh(_ refreshControl: UIRefreshControl) {
+           DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.homeViewModel?.fetchMovies(page: 1)
+           }
+       }
 }
 
 // MARK: - Public
