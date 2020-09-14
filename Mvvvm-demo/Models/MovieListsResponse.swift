@@ -9,10 +9,10 @@
 import Foundation
 
 struct MovieListsResponse<T: Codable>: Codable {
-    let page: Int?
+    var page: Int?
     // T for one object
     let results: T?
-    let totalPages: Int?
+    var totalPages: Int?
     let totalResults: Int?
 
     enum CodingKeys: String, CodingKey {

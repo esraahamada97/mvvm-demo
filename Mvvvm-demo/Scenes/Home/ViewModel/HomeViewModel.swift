@@ -10,7 +10,7 @@ import Foundation
 
 class HomeViewModel {
     
-    var movies: Binding<[MovieModel]>?
+    var movies: Binding<MovieListsResponse<[MovieModel]>>?
     var moviesError: Binding<NetworkError>?
     var movieDetails: Binding<MovieDetails>?
     var movieDetailsError: Binding<NetworkError>?
@@ -21,7 +21,7 @@ class HomeViewModel {
                 switch result {
                 case .success(let listData):
                     //self.movies = Binding(listData.results ?? [])
-                    self.movies?.value = listData.results
+                    self.movies?.value = listData
                 case .failure(let error):
                     print("error \(error)")
                     self.moviesError?.value = error
@@ -44,7 +44,7 @@ class HomeViewModel {
     }
     
     init() {
-        movies = Binding([])
+        movies = Binding(nil)
         movieDetails = Binding(nil)
         moviesError = Binding(nil)
         movieDetailsError = Binding(nil)

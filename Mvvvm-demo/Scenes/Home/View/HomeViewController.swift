@@ -15,14 +15,18 @@ class HomeViewController: BaseViewController {
     private var homeViewModel: HomeViewModel?
     private var moviesList: [MovieModel]?
     private var movieDetails: MovieDetails?
+    private var listResponseObject: MovieListsResponse<[MovieModel]>?
+    private var isLoadMore = false
     
     // MARK: - Public Variables
+    
     // MARK: - IBOutletes
     @IBOutlet private weak var moviesCollectionView: UICollectionView!
     
     // MARK: - Computed Variables
        lazy var refreshControl: UIRefreshControl = {
            let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .red
            refreshControl.addTarget(self,
                                     action: #selector(handlePullToRefresh(_:)),
                                     for: UIControl.Event.valueChanged)
@@ -53,6 +57,7 @@ class HomeViewController: BaseViewController {
 
 // MARK: - Private
 extension HomeViewController {
+
     private func requestData() {
         showLoader(view: self.view, type: .native)
         homeViewModel?.fetchMovies(page: 1)
@@ -65,17 +70,28 @@ extension HomeViewController {
     }
     
     private func fetchMoviesSucces() {
+        
         homeViewModel?.movies?.bind { [weak self] movies in
             self?.hideLoader()
+            if self?.isLoadMore ?? true {
+                self?.isLoadMore = false
+                self?.moviesList?.append(contentsOf: movies.results ?? [])
+               self?.listResponseObject = movies
+                self?.moviesCollectionView.reloadData()
+                self?.moviesCollectionView.spr_endRefreshing()
+                
+            } else {
             self?.moviesCollectionView.spr_endRefreshing()
             self?.refreshControl.endRefreshing()
             UIView.animate(withDuration: 0.2, animations: {
                 self?.moviesList = []
                 self?.moviesCollectionView.reloadData()
             }, completion: { _ in
-                self?.moviesList = movies
+                self?.moviesList = movies.results ?? []
+                self?.listResponseObject = movies
                 self?.moviesCollectionView.reloadData()
             })
+        }
         }
     }
     
@@ -114,6 +130,11 @@ extension HomeViewController {
             forCellWithReuseIdentifier: MovieCell.className)
         
         moviesCollectionView.refreshControl = refreshControl
+        
+        moviesCollectionView.spr_setIndicatorFooter {
+                   print("load more")
+                   self.loadMore()
+        }
            }
     
     @objc
@@ -122,6 +143,17 @@ extension HomeViewController {
             self.homeViewModel?.fetchMovies(page: 1)
            }
        }
+    
+    private func loadMore() {
+
+        let currentPage = listResponseObject?.page ?? 0
+        if currentPage < listResponseObject?.totalPages ?? 0 {
+            isLoadMore = true
+            homeViewModel?.fetchMovies(page: currentPage + 1)
+        } else {
+            moviesCollectionView.spr_endRefreshing()
+        }
+    }
 }
 
 // MARK: - Public
