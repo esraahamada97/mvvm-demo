@@ -28,6 +28,8 @@
 		CE72A4BE250E31FC00A6A82C /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE72A4BC250E31FC00A6A82C /* MovieCell.xib */; };
 		CE72A4C0250E366200A6A82C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72A4BF250E366200A6A82C /* UIImageView+Extension.swift */; };
 		CE72A4C2250E37A800A6A82C /* NSObject + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72A4C1250E37A800A6A82C /* NSObject + Extensions.swift */; };
+		CE84B249250F534D009E1707 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84B247250F534D009E1707 /* SplashViewController.swift */; };
+		CE84B24A250F534D009E1707 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE84B248250F534D009E1707 /* SplashViewController.xib */; };
 		CE93D1C2250446F70098327B /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93D1C1250446F70098327B /* Assets.swift */; };
 		CE9BD59625070F03005B9619 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD59525070F03005B9619 /* MovieModel.swift */; };
 		CE9BD59A250713C0005B9619 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BD599250713C0005B9619 /* NetworkError.swift */; };
@@ -85,6 +87,8 @@
 		CE72A4BC250E31FC00A6A82C /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		CE72A4BF250E366200A6A82C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		CE72A4C1250E37A800A6A82C /* NSObject + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Extensions.swift"; sourceTree = "<group>"; };
+		CE84B247250F534D009E1707 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		CE84B248250F534D009E1707 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		CE93D1C1250446F70098327B /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		CE9BD59525070F03005B9619 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		CE9BD599250713C0005B9619 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		CE1F2E412503F3FB0029F7AC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CE84B246250F532E009E1707 /* splash */,
 				CE9BD59325070EB0005B9619 /* Home */,
 			);
 			path = Scenes;
@@ -354,6 +359,15 @@
 			path = MovieCell;
 			sourceTree = "<group>";
 		};
+		CE84B246250F532E009E1707 /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				CE84B247250F534D009E1707 /* SplashViewController.swift */,
+				CE84B248250F534D009E1707 /* SplashViewController.xib */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
 		CE9BD59325070EB0005B9619 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1F2E392503EF680029F7AC /* LaunchScreen.storyboard in Resources */,
+				CE84B24A250F534D009E1707 /* SplashViewController.xib in Resources */,
 				CE4ACDB42504B8E600FA9356 /* Localizable.strings in Resources */,
 				CE1F2E362503EF680029F7AC /* Assets.xcassets in Resources */,
 				CE4ACDBF2504BB4A00FA9356 /* Colors.xcassets in Resources */,
@@ -595,6 +610,7 @@
 				CE9BD59625070F03005B9619 /* MovieModel.swift in Sources */,
 				CE9BD59E25071595005B9619 /* NetworkResponse.swift in Sources */,
 				CE9BD5BF2507272F005B9619 /* Loader.swift in Sources */,
+				CE84B249250F534D009E1707 /* SplashViewController.swift in Sources */,
 				CE1F2E2D2503EF660029F7AC /* AppDelegate.swift in Sources */,
 				CE9BD5C1250727E8005B9619 /* BaseViewController.swift in Sources */,
 				CE9BD5AF25071B12005B9619 /* NetworkManager+ParseResponse.swift in Sources */,

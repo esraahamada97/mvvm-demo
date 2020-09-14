@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,7 @@
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="I4s-gL-mRr">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="PrimaryColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1bn-Gt-fQI">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -29,7 +30,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" name="PrimaryColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="I4s-gL-mRr" secondAttribute="bottom" id="LfE-qb-AP6"/>
                 <constraint firstItem="I4s-gL-mRr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="R5K-xO-cM5"/>
@@ -40,4 +41,9 @@
             <point key="canvasLocation" x="139" y="84"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.064435236160000006" green="0.1170954481" blue="0.149024725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

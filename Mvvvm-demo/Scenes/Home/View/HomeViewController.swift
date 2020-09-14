@@ -26,7 +26,7 @@ class HomeViewController: BaseViewController {
     // MARK: - Computed Variables
        lazy var refreshControl: UIRefreshControl = {
            let refreshControl = UIRefreshControl()
-        refreshControl.tintColor = .red
+        refreshControl.tintColor = .logoTextColor
            refreshControl.addTarget(self,
                                     action: #selector(handlePullToRefresh(_:)),
                                     for: UIControl.Event.valueChanged)
@@ -72,7 +72,7 @@ extension HomeViewController {
     private func fetchMoviesSucces() {
         
         homeViewModel?.movies?.bind { [weak self] movies in
-            self?.hideLoader()
+            //self?.hideLoader()
             if self?.isLoadMore ?? true {
                 self?.isLoadMore = false
                 self?.moviesList?.append(contentsOf: movies.results ?? [])
@@ -195,9 +195,8 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 extension HomeViewController: UICollectionViewDelegate {
-    
+   
 }
-
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -206,7 +205,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         let collectionViewSize = collectionView.frame.size.width - 31
         return CGSize(width: collectionViewSize / 2, height: 338)
     }
-    
+   
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -217,6 +216,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
+        return 4
     }
 }

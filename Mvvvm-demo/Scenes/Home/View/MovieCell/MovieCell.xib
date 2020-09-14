@@ -20,11 +20,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="169" height="364"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMQ-xl-lfm" userLabel="imageViewContainer">
-                                <rect key="frame" x="10" y="6" width="149" height="312.5"/>
+                                <rect key="frame" x="10" y="6" width="149" height="312"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o5s-4p-z4X">
-                                        <rect key="frame" x="0.0" y="0.0" width="149" height="312.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="149" height="312"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornurRadius">
                                                 <real key="value" value="8"/>
@@ -32,7 +31,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="o5s-4p-z4X" firstAttribute="leading" secondItem="xMQ-xl-lfm" secondAttribute="leading" id="6R4-ey-z8c"/>
                                     <constraint firstItem="o5s-4p-z4X" firstAttribute="top" secondItem="xMQ-xl-lfm" secondAttribute="top" id="DEz-FQ-uEu"/>
@@ -46,8 +44,8 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-M1-Ho8">
-                                <rect key="frame" x="15" y="333.5" width="149" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="15" y="333" width="149" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
