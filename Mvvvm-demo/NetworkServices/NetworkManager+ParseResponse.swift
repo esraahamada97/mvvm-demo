@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Moya
+
 extension NetworkManager {
     
     func parseResponse<T: Codable>(moyaResult: MoyaCompletion,
@@ -17,7 +19,7 @@ extension NetworkManager {
             
             if (200...299 ~= response.statusCode) {
                 do {
-                    let result = try JSONDecoder().decode(NetworkResponse<T>.self, from: response.data)
+                    let result = try JSONDecoder().decode(T.self, from: response.data)
                     
                     completion(.success(result), response.statusCode)
                 } catch {
@@ -30,6 +32,17 @@ extension NetworkManager {
         case .failure(let error):
             let customError = NetworkError(error: error)
             completion(.failure(customError), nil)
+        }
+    }
+    
+    func fetch<T: Codable>(endPoint: TargetType, completion: @escaping(
+        _ result: Swift.Result< T,
+    NetworkError>,
+    _ statusCode: Int?) -> Void) {
+        
+        provider.request(MultiTarget(endPoint)) { result in
+            
+                self.parseResponse(moyaResult: result, completion: completion)
         }
     }
 }

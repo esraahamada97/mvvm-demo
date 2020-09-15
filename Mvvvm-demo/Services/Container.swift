@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 
 class Container {
-
-    class func getHomeViewController() -> UIViewController {
-        let viewController = HomeViewController()
+  
+    class func getHomeViewController(viewModel: HomeViewModel = HomeViewModel()) -> UIViewController {
+        let viewController = HomeModule.createModule(viewModel: viewModel)
         return viewController
     }
-
+    
+    class func getSplashViewController() -> UIViewController {
+        let viewController = SplashViewController()
+        return viewController
+    }
     class func embedVCInNavController(_ viewController: UIViewController) -> UIViewController {
         let nav = AppNavigationController(rootViewController: viewController)
         return nav

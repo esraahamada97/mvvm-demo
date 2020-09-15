@@ -39,13 +39,13 @@ class Loader: NSObject {
             
         case .native:
             let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
-            activityIndicator.color = UIColor.gray
+            activityIndicator.color = UIColor.logoTextColor
             activityIndicator.startAnimating()
             activityIndicator.center = viewBackgroundLoading.center
             viewBackgroundLoading.addSubview(activityIndicator)
             
             viewBackgroundLoading.center = spinnerView.center
-            viewBackgroundLoading.backgroundColor = UIColor.white
+            viewBackgroundLoading.backgroundColor = UIColor.primaryColor
             viewBackgroundLoading.alpha = 1
             viewBackgroundLoading.clipsToBounds = true
             viewBackgroundLoading.layer.cornerRadius = 15

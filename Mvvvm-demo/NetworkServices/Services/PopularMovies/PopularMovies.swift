@@ -44,7 +44,7 @@ extension PopularMoviesService: TargetType {
         switch self {
         case .getPopularMovies(let page):
             return .requestParameters(parameters: [
-                "api_key": "81214f14b3b4fc4623c6b48bb307ab11",
+                "api_key": NetworkManager.shared._networkConfig?.apiKey ?? "",
                 "languag": "en-US",
                 "page": page], encoding: URLEncoding.default)
             //            return .requestParameters(parameters: [
