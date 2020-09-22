@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MovieModel: Codable {
+class MovieModel: Codable {
   
     let posterPath: String?
     let movieID: Int?
@@ -20,12 +20,5 @@ struct MovieModel: Codable {
         case movieID = "id"
         case originalTitle = "original_title"
         case title = "title"
-    }
-    
-    init(movieID: Int, title: String, posterPath: String, originalTitle: String) {
-        self.movieID = movieID
-        self.title = title
-        self.posterPath = posterPath
-        self.originalTitle = originalTitle
     }
 }

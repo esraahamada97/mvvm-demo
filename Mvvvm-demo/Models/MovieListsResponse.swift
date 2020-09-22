@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct MovieListsResponse<T: Codable>: Codable {
+class MovieListsResponse<T: Codable>: NetworkResponse {
     var page: Int?
     // T for one object
-    let results: T?
+    var results: T?
     var totalPages: Int?
-    let totalResults: Int?
+    let totalResults: Int? = 0
 
     enum CodingKeys: String, CodingKey {
         case page = "page"

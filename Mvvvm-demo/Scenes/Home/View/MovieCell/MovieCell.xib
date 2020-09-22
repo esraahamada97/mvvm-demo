@@ -47,7 +47,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-M1-Ho8">
-                                <rect key="frame" x="15" y="301" width="149" height="53"/>
+                                <rect key="frame" x="15" y="301" width="149" height="21"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                             <constraint firstItem="xMQ-xl-lfm" firstAttribute="top" secondItem="pdG-gk-UB4" secondAttribute="top" constant="6" id="biF-3R-sKQ"/>
                             <constraint firstAttribute="trailing" secondItem="Nht-M1-Ho8" secondAttribute="trailing" constant="5" id="iMw-gG-zHa"/>
                             <constraint firstItem="xMQ-xl-lfm" firstAttribute="leading" secondItem="pdG-gk-UB4" secondAttribute="leading" constant="10" id="kWV-w1-XO4"/>
-                            <constraint firstAttribute="bottom" secondItem="Nht-M1-Ho8" secondAttribute="bottom" constant="10" id="xdW-YD-11S"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Nht-M1-Ho8" secondAttribute="bottom" constant="10" id="xdW-YD-11S"/>
                         </constraints>
                     </view>
                 </subviews>

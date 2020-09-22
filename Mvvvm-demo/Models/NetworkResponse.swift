@@ -8,5 +8,15 @@
 
 import Foundation
 
-struct NetworkResponse<T: Codable>: Codable {
+class NetworkResponse: Codable {
+    //put base properties
+    let isSuccess: Bool?
+    let statusCode: Int?
+    let statusMessage: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case isSuccess = "success"
+        case statusCode = "status_code"
+        case statusMessage = "status_message"
+    }
 }

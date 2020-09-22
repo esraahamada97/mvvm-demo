@@ -12,6 +12,7 @@ import Moya
 // swiftlint:disable all
 enum PopularMoviesService {
     case getPopularMovies(page: Int)
+    case postMovieReview(value: Int)
 }
 
 extension PopularMoviesService: TargetType {
@@ -25,6 +26,9 @@ extension PopularMoviesService: TargetType {
         switch self {
         case .getPopularMovies:
             return "/movie/popular"
+            
+        case .postMovieReview:
+            return "/movie/505/rating"
         }
     }
     
@@ -32,6 +36,8 @@ extension PopularMoviesService: TargetType {
         switch self {
         case .getPopularMovies:
             return .get
+        case .postMovieReview:
+            return .post
         }
     }
     
@@ -47,15 +53,23 @@ extension PopularMoviesService: TargetType {
                 "api_key": NetworkManager.shared._networkConfig?.apiKey ?? "",
                 "languag": "en-US",
                 "page": page], encoding: URLEncoding.default)
-            //            return .requestParameters(parameters: [
-            //                "api_key": NetworkManager.shared._networkConfig?.apiKey ?? "",
-            //                "languag": "en-US",
-            //                "page": page], encoding: URLEncoding.default)
+            
+        case .postMovieReview(value: let value):
+            return .requestParameters(parameters: [
+                "api_key": NetworkManager.shared._networkConfig?.apiKey ?? "",
+                "guest_session_id": "38b5ba382170c4cd1a2342efff241e7c",
+                "value": value], encoding: URLEncoding.queryString )
         }
     }
     
     var headers: [String: String]? {
-        return nil
+        return nil 
+        //        switch self {
+        //        case .getPopularMovies:
+        //            return nil
+        //        case .postMovieReview:
+        //            return ["Authorization": "Bearer " + (UserManager.getAccessToken() ?? "")]
+        //        }
     }
 }
 

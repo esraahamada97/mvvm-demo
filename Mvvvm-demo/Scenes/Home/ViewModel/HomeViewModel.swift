@@ -11,23 +11,27 @@ import Foundation
 class HomeViewModel {
     
      weak var service: HomeWebServiceProtocol?
-    var movies: Binding<MovieListsResponse<[MovieModel]>>?
-    var moviesError: Binding<NetworkError>?
-    var movieDetails: Binding<MovieDetails>?
-    var movieDetailsError: Binding<NetworkError>?
+    var movies: Binding<MovieListsResponse<[MovieModel]>> = Binding(nil)
+    var moviesError: Binding<NetworkError> = Binding(nil)
+    var movieDetails: Binding<MovieDetails> = Binding(nil)
+    var movieDetailsError: Binding<NetworkError> = Binding(nil)
+    var postMovieRateMessage: Binding<String> = Binding(nil)
+    
+    init(service: HomeWebServiceProtocol = HomeWebService.shared) {
+        self.service = service
+    }
     
     func fetchMovies(page: Int) {
         service?.getPopularMovies(page: page) { ( result: Result<MovieListsResponse<[MovieModel]>, NetworkError>, _) in
             switch result {
             case .success(let listData):
                 //self.movies = Binding(listData.results ?? [])
-                self.movies?.value = listData
+                self.movies.value = listData
             case .failure(let error):
                 print("error \(error)")
-                self.moviesError?.value = error
+                self.moviesError.value = error
             }
         }
-
     }
     
     func fetchMovieDetails(movieId: Int) {
@@ -37,20 +41,25 @@ class HomeViewModel {
                 switch result {
                 case .success(let listData):
                     //self.movies = Binding(listData.results ?? [])
-                    self.movieDetails?.value = listData
+                    self.movieDetails.value = listData
                 case .failure(let error):
                     print("error \(error)")
-                    self.movieDetailsError?.value = error
+                    self.movieDetailsError.value = error
                 }
             }
     }
     
-    init(service: HomeWebServiceProtocol = HomeWebService.shared) {
-        self.service = service
-        movies = Binding(nil)
-        movieDetails = Binding(nil)
-        moviesError = Binding(nil)
-        movieDetailsError = Binding(nil)
+    func postMovieRate(rate: Int) {
+     service?.postMovieRate(rate: rate) { ( result: Result<NetworkResponse, NetworkError>, _) in
+         switch result {
+         case .success(let message):
+             //self.movies = Binding(listData.results ?? [])
+            self.postMovieRateMessage.value = message.statusMessage
+         case .failure(let error):
+            print("error \(String(describing: error.errorMessage()))")
+             //self.moviesError.value = error
+         }
+     }
+        
     }
-    
 }
