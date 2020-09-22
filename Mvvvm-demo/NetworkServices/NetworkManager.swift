@@ -27,15 +27,15 @@ class NetworkManager {
 //        (NetworkManager.shared?.getAccessToken() ?? "")
 //    })
     
-   // var getAccessToken: () -> (String)
+    //var getAccessToken: () -> (String)
     
     var provider: MoyaProvider<MultiTarget>!
     
     
-//    init(config: NetworkDefaults, getAccessToken: @escaping () -> (String)) {
+   // init(config: NetworkDefaults, getAccessToken: @escaping () -> (String)) {
         init(config: NetworkDefaults) {
         self._networkConfig = config
-        //self.getAccessToken = getAccessToken
+       // self.getAccessToken = getAccessToken
         
         NetworkManager.shared = self
         
@@ -44,8 +44,6 @@ class NetworkManager {
                 "Content-Type": "application/json; charset=utf-8"
         ])
         
-        //        AuthProvider = MoyaProvider<AuthService>(session: DammaSessionManager.shared,
-        //                                                 plugins: [NetworkLoggerPlugin(), headerPlugin])
         
 //        provider = MoyaProvider<MultiTarget>(session: MoviesDBSessionManager.shared,
 //                                             plugins: [NetworkLoggerPlugin(), headerPlugin, accessTocken])

@@ -17,27 +17,28 @@ enum `Type`:String, Codable {
 }
 
 struct NetworkError: Error, Codable {
-    
-    var message: String?
-    var type: Type?
     var statusCode: Int?
+    var statusMessage: String?
+    var isSuccess: Bool?
+    var type: Type?
     
     enum CodingKeys: String, CodingKey {
         
-        case message = "status_message"
-        case type
         case statusCode = "status_code"
+        case statusMessage = "status_message"
+        case isSuccess = "success"
+        case type
     }
     
     init() {}
     
     init(error: MoyaError) {
         
-        self.message = error.errorDescription
+        self.statusMessage = error.errorDescription
         
         if case let MoyaError.underlying(underlying, _) = error ,
             case let AFError.sessionTaskFailed(error: urlErrorDomain) = underlying {
-            self.message = urlErrorDomain.localizedDescription
+            self.statusMessage = urlErrorDomain.localizedDescription
         }
         
         // handel no inernet error message and session expire
@@ -71,6 +72,6 @@ extension NetworkError {
 
 extension NetworkError {
     func errorMessage() -> String {
-            return self.message ?? ""
+        return self.statusMessage ?? ""
     }
 }

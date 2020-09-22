@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		89219B1CEEB8ADD52EE79D89 /* Pods_Mvvvm_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36003942AB0E4E262FB72575 /* Pods_Mvvvm_demo.framework */; };
+		CE1DF1F6251853A000BB7393 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DF1F5251853A000BB7393 /* UserManager.swift */; };
 		CE1F2E2D2503EF660029F7AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F2E2C2503EF660029F7AC /* AppDelegate.swift */; };
 		CE1F2E2F2503EF660029F7AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F2E2E2503EF660029F7AC /* SceneDelegate.swift */; };
 		CE1F2E362503EF680029F7AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1F2E352503EF680029F7AC /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		36003942AB0E4E262FB72575 /* Pods_Mvvvm_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mvvvm_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F525638233CFDC2EDD2AD67 /* Pods-Mvvvm-demo.release (stage).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mvvvm-demo.release (stage).xcconfig"; path = "Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo.release (stage).xcconfig"; sourceTree = "<group>"; };
 		80F44FA842172465A25C4FFD /* Pods-Mvvvm-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mvvvm-demo.debug.xcconfig"; path = "Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		CE1DF1F5251853A000BB7393 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		CE1F2E292503EF660029F7AC /* Mvvvm-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mvvvm-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1F2E2C2503EF660029F7AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1F2E2E2503EF660029F7AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			children = (
 				CE9BD5B225072315005B9619 /* Container.swift */,
 				CE9BD5B42507241C005B9619 /* AppManager.swift */,
+				CE1DF1F5251853A000BB7393 /* UserManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				CE9BD5BA250726C2005B9619 /* AppNavigationController.swift in Sources */,
 				CE9BD59625070F03005B9619 /* MovieModel.swift in Sources */,
 				CE9BD59E25071595005B9619 /* NetworkResponse.swift in Sources */,
+				CE1DF1F6251853A000BB7393 /* UserManager.swift in Sources */,
 				CE9BD5BF2507272F005B9619 /* Loader.swift in Sources */,
 				CE84B249250F534D009E1707 /* SplashViewController.swift in Sources */,
 				CE1F2E2D2503EF660029F7AC /* AppDelegate.swift in Sources */,

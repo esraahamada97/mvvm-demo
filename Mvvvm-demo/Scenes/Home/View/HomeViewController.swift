@@ -13,9 +13,6 @@ class HomeViewController: BaseViewController {
     
     // MARK: - Private Variables
     private var homeViewModel: HomeViewModel?
-    private var moviesList: [MovieModel]?
-    private var movieDetails: MovieDetails?
-    private var listResponseObject: MovieListsResponse<[MovieModel]>?
     private var isLoadMore = false
     
     // MARK: - Public Variables
@@ -24,9 +21,11 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var moviesCollectionView: UICollectionView!
     
     // MARK: - Computed Variables
+    //remove variable because there is one list only so put it in extension and methods
        lazy var refreshControl: UIRefreshControl = {
            let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .logoTextColor
+       
            refreshControl.addTarget(self,
                                     action: #selector(handlePullToRefresh(_:)),
                                     for: UIControl.Event.valueChanged)
@@ -36,11 +35,11 @@ class HomeViewController: BaseViewController {
     // MARK: - View controller lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         setCollectionView()
         fireMoviesListeners()
         fireMoviesDetailsListeners()
+        postMovieRateSuccess()
         requestData()
     }
     
@@ -60,23 +59,26 @@ extension HomeViewController {
 
     private func requestData() {
         showLoader(view: self.view, type: .native)
+        //send perpage
         homeViewModel?.fetchMovies(page: 1)
         homeViewModel?.fetchMovieDetails(movieId: 505)
+        homeViewModel?.postMovieRate(rate: 8)
     }
     
     private func fireMoviesListeners() {
-        fetchMoviesSucces()
-        fetchMoviesFail()
+        //rename methods
+        moviesSuccesListener()
+        moviesFailureListener()
     }
     
-    private func fetchMoviesSucces() {
+    private func moviesSuccesListener() {
         
-        homeViewModel?.movies?.bind { [weak self] movies in
-            //self?.hideLoader()
+        homeViewModel?.movies.bind { [weak self] movies in
+            self?.hideLoader()
             if self?.isLoadMore ?? true {
                 self?.isLoadMore = false
-                self?.moviesList?.append(contentsOf: movies.results ?? [])
-               self?.listResponseObject = movies
+                self?.homeViewModel?.movies.value?.results?.append(contentsOf: movies.results ?? [])
+               //self?.listResponseObject = movies
                 self?.moviesCollectionView.reloadData()
                 self?.moviesCollectionView.spr_endRefreshing()
                 
@@ -84,41 +86,47 @@ extension HomeViewController {
             self?.moviesCollectionView.spr_endRefreshing()
             self?.refreshControl.endRefreshing()
             UIView.animate(withDuration: 0.2, animations: {
-                self?.moviesList = []
+                //self?.homeViewModel?.movies.value?.results = []
                 self?.moviesCollectionView.reloadData()
             }, completion: { _ in
-                self?.moviesList = movies.results ?? []
-                self?.listResponseObject = movies
+                //self?.homeViewModel?.movies.value?.results = []
+                //self?.moviesList = movies.results ?? []
+                //self?.listResponseObject = movies
                 self?.moviesCollectionView.reloadData()
             })
         }
         }
     }
     
-    private func fetchMoviesFail() {
-        homeViewModel?.moviesError?.bind { [weak self] error in
-            self?.showError(message: error.message ?? "")
+    private func moviesFailureListener() {
+        
+        homeViewModel?.moviesError.bind { [weak self] error in
+            self?.showError(message: error.errorMessage() )
+            //check status code casses
         }
     }
     
     private func fireMoviesDetailsListeners() {
-        fetchMoviesDetailsSucces()
-        fetchMoviesDetailsFail()
+        movieDetailsSuccesListener()
+        movieDetailsFailureListener()
     }
     
-    private func fetchMoviesDetailsSucces() {
-        homeViewModel?.movieDetails?.bind { [weak self] details in
+    private func movieDetailsSuccesListener() {
+        homeViewModel?.movieDetails.bind { [weak self] details in
             self?.hideLoader()
-            self?.movieDetails = details
         }
     }
     
-    private func fetchMoviesDetailsFail() {
-        homeViewModel?.movieDetailsError?.bind { [weak self] error in
-            self?.showError(message: error.message ?? "")
+    private func movieDetailsFailureListener() {
+        homeViewModel?.movieDetailsError.bind { [weak self] error in
+            self?.showError(message: error.errorMessage())
         }
     }
     
+    private func postMovieRateSuccess () {
+       homeViewModel?.postMovieRateMessage.bind { [weak self] message in
+       }
+    }
     private func setCollectionView() {
            
            moviesCollectionView.dataSource = self
@@ -146,8 +154,8 @@ extension HomeViewController {
     
     private func loadMore() {
 
-        let currentPage = listResponseObject?.page ?? 0
-        if currentPage < listResponseObject?.totalPages ?? 0 {
+        let currentPage = homeViewModel?.movies.value?.page ?? 0
+        if currentPage < homeViewModel?.movies.value?.totalPages ?? 0 {
             isLoadMore = true
             homeViewModel?.fetchMovies(page: currentPage + 1)
         } else {
@@ -168,7 +176,7 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDataSource {
       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             
-            return moviesList?.count ?? 0
+        return homeViewModel?.movies.value?.results?.count ?? 0
         }
         
         func collectionView(_ collectionView: UICollectionView,
@@ -178,7 +186,7 @@ extension HomeViewController: UICollectionViewDataSource {
                     withReuseIdentifier: MovieCell.className,
                     for: indexPath) as? MovieCell else {
                         return UICollectionViewCell() }
-            guard let movie = moviesList?[indexPath.row] else {
+            guard let movie = homeViewModel?.movies.value?.results?[indexPath.row] else {
                 return UICollectionViewCell()
             }
             
@@ -203,7 +211,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let collectionViewSize = collectionView.frame.size.width - 31
-        return CGSize(width: collectionViewSize / 2, height: 338)
+        return CGSize(width: collectionViewSize / 2, height: 360)
     }
    
     func collectionView(_ collectionView: UICollectionView,

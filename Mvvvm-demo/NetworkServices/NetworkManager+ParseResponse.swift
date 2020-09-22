@@ -27,11 +27,20 @@ extension NetworkManager {
                 }
             } else {
                 // 300-399 ,400-499
+                do {
+                    let error = try JSONDecoder().decode(NetworkError.self, from: response.data)
+                    var businessError = error
+                    businessError.type = .business
+                    businessError.statusCode = response.statusCode
+                    businessError.statusMessage = error.statusMessage
+                    completion(.failure(businessError ?? NetworkError()), response.statusCode)
+                } catch {
                     completion(.failure(NetworkError.parseError), response.statusCode)
+                }
             }
         case .failure(let error):
             let customError = NetworkError(error: error)
-            completion(.failure(customError), nil)
+            completion(.failure(customError), error.errorCode)
         }
     }
     

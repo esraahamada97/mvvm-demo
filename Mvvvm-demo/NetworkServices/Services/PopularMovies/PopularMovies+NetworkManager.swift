@@ -9,11 +9,8 @@
 import Foundation
 import Moya
 
-
 extension NetworkManager {
     
-    
-        
 //        MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin()]).request(MultiTarget(endPoint)) { (response) in
 //            switch response {
 //            case .success(let response):
@@ -29,16 +26,16 @@ extension NetworkManager {
 //            }
 //        }
     
-    func getPopularMovies(page: Int,
-                          completion: @escaping(
-        _ result: Swift.Result<MovieListsResponse<[MovieModel]>,
-        NetworkError>,
-        _ statusCode: Int?) -> Void) {
-        
-        provider.request(MultiTarget(PopularMoviesService.getPopularMovies(page: page))) { result in
-            
-                self.parseResponse(moyaResult: result, completion: completion)
-        }
-    }
+//    func getPopularMovies(page: Int,
+//                          completion: @escaping(
+//        _ result: Swift.Result<MovieListsResponse<[MovieModel]>,
+//        NetworkError>,
+//        _ statusCode: Int?) -> Void) {
+//        
+//        provider.request(MultiTarget(PopularMoviesService.getPopularMovies(page: page))) { result in
+//            
+//                self.parseResponse(moyaResult: result, completion: completion)
+//        }
+//    }
 
 }
