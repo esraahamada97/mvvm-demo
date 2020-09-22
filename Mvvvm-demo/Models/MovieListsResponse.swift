@@ -13,7 +13,7 @@ class MovieListsResponse<T: Codable>: NetworkResponse {
     // T for one object
     var results: T?
     var totalPages: Int?
-    let totalResults: Int? = 0
+    var totalResults: Int? 
 
     enum CodingKeys: String, CodingKey {
         case page = "page"

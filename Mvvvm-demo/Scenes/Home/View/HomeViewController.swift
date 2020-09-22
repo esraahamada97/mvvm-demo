@@ -124,8 +124,8 @@ extension HomeViewController {
     }
     
     private func postMovieRateSuccess () {
-       homeViewModel?.postMovieRateMessage.bind { [weak self] message in
-       }
+//       homeViewModel?.postMovieRateMessage.bind { [weak self] message in
+//       }
     }
     private func setCollectionView() {
            
