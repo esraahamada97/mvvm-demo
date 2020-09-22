@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NetworkResponse: Codable {
+struct NetworkResponse: Codable {
     //put base properties
     let isSuccess: Bool?
     let statusCode: Int?

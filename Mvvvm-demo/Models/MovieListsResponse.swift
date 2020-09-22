@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MovieListsResponse<T: Codable>: NetworkResponse {
+struct MovieListsResponse<T: Codable>: Codable {
     var page: Int?
     // T for one object
     var results: T?

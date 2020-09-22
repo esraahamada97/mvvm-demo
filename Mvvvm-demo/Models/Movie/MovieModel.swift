@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MovieModel: Codable {
+struct MovieModel: Codable {
   
     let posterPath: String?
     let movieID: Int?
