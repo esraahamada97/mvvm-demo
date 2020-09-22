@@ -13,6 +13,7 @@ class HomeViewController: BaseViewController {
     
     // MARK: - Private Variables
     private var homeViewModel: HomeViewModel?
+     private var movieList: [MovieModel] = []
     private var isLoadMore = false
     
     // MARK: - Public Variables
@@ -77,7 +78,7 @@ extension HomeViewController {
             self?.hideLoader()
             if self?.isLoadMore ?? true {
                 self?.isLoadMore = false
-                self?.homeViewModel?.movies.value?.results?.append(contentsOf: movies.results ?? [])
+                self?.movieList.append(contentsOf: movies.results ?? [])
                //self?.listResponseObject = movies
                 self?.moviesCollectionView.reloadData()
                 self?.moviesCollectionView.spr_endRefreshing()
@@ -86,12 +87,10 @@ extension HomeViewController {
             self?.moviesCollectionView.spr_endRefreshing()
             self?.refreshControl.endRefreshing()
             UIView.animate(withDuration: 0.2, animations: {
-                //self?.homeViewModel?.movies.value?.results = []
+                self?.movieList = movies.results ?? []
                 self?.moviesCollectionView.reloadData()
             }, completion: { _ in
-                //self?.homeViewModel?.movies.value?.results = []
-                //self?.moviesList = movies.results ?? []
-                //self?.listResponseObject = movies
+                self?.movieList = movies.results ?? []
                 self?.moviesCollectionView.reloadData()
             })
         }
@@ -176,7 +175,7 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDataSource {
       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             
-        return homeViewModel?.movies.value?.results?.count ?? 0
+        return movieList.count
         }
         
         func collectionView(_ collectionView: UICollectionView,
@@ -186,10 +185,7 @@ extension HomeViewController: UICollectionViewDataSource {
                     withReuseIdentifier: MovieCell.className,
                     for: indexPath) as? MovieCell else {
                         return UICollectionViewCell() }
-            guard let movie = homeViewModel?.movies.value?.results?[indexPath.row] else {
-                return UICollectionViewCell()
-            }
-            
+             let movie = movieList[indexPath.row]
             cell.bind(movie: movie)
             return cell
         }
