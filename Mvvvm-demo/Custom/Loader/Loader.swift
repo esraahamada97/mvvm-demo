@@ -38,7 +38,7 @@ class Loader: NSObject {
             hud.mode = MBProgressHUDMode.indeterminate
             
         case .native:
-            let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+            let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
             activityIndicator.color = UIColor.logoTextColor
             activityIndicator.startAnimating()
             activityIndicator.center = viewBackgroundLoading.center
