@@ -15,6 +15,7 @@ extension AppDelegate {
         AppManager.launchApp(application)
         self.window = AppManager.shared.window
     }
+    
     func initNetwork() {
         
         let defaults = NetworkDefaults(baseUrl: Environment.baseURL,
