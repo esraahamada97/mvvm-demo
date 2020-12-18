@@ -33,7 +33,7 @@ extension NetworkManager {
                     businessError.type = .business
                     businessError.statusCode = response.statusCode
                     businessError.statusMessage = error.statusMessage
-                    completion(.failure(businessError ?? NetworkError()), response.statusCode)
+                    completion(.failure(businessError ), response.statusCode)
                 } catch {
                     completion(.failure(NetworkError.parseError), response.statusCode)
                 }

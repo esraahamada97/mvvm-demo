@@ -111,7 +111,7 @@ extension HomeViewController {
     }
     
     private func movieDetailsSuccesListener() {
-        homeViewModel?.movieDetails.bind { [weak self] details in
+        homeViewModel?.movieDetails.bind { [weak self] _ in
             self?.hideLoader()
         }
     }

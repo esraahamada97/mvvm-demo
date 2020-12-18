@@ -12,6 +12,12 @@ import UIKit
 extension UIView {
     
     @IBInspectable var borderColor: UIColor? {
+        get {
+            guard let color = layer.borderColor else {
+                return nil
+            }
+            return UIColor(cgColor: color)
+        }
         set {
             guard let color = newValue else {
                 layer.borderColor = nil
@@ -19,29 +25,23 @@ extension UIView {
             }
             layer.borderColor = color.cgColor
         }
-        get {
-            guard let color = layer.borderColor else {
-                return nil
-            }
-            return UIColor(cgColor: color)
-        }
     }
     
     @IBInspectable var borderWidth: CGFloat {
-        set {
-            layer.borderWidth = newValue
-        }
         get {
             return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
         }
     }
     
     @IBInspectable var cornurRadius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-        }
         get {
             return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
         }
     }
     

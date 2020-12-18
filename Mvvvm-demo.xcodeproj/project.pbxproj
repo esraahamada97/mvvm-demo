@@ -56,6 +56,7 @@
 		CEA891872508D0270000D32E /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA891862508D0270000D32E /* Binding.swift */; };
 		CEA8918D2508D0DD0000D32E /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8918C2508D0DD0000D32E /* HomeWireframe.swift */; };
 		CEA8918F2508D27D0000D32E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8918E2508D27D0000D32E /* HomeViewModel.swift */; };
+		CEFF402425250D7A00BE3874 /* DataTypeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF402325250D7A00BE3874 /* DataTypeListener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		CEA891862508D0270000D32E /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		CEA8918C2508D0DD0000D32E /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		CEA8918E2508D27D0000D32E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CEFF402325250D7A00BE3874 /* DataTypeListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeListener.swift; sourceTree = "<group>"; };
 		D59A3D2DE9BB5907C422045F /* Pods-Mvvvm-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mvvvm-demo.release.xcconfig"; path = "Target Support Files/Pods-Mvvvm-demo/Pods-Mvvvm-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA891862508D0270000D32E /* Binding.swift */,
+				CEFF402325250D7A00BE3874 /* DataTypeListener.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -484,7 +487,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = user;
 				TargetAttributes = {
 					CE1F2E282503EF660029F7AC = {
@@ -647,6 +650,7 @@
 				CEA8918F2508D27D0000D32E /* HomeViewModel.swift in Sources */,
 				CE72A4C0250E366200A6A82C /* UIImageView+Extension.swift in Sources */,
 				CE9BD5A525071775005B9619 /* HomeViewController.swift in Sources */,
+				CEFF402425250D7A00BE3874 /* DataTypeListener.swift in Sources */,
 				CE9BD5AB2507196F005B9619 /* PopularMovies.swift in Sources */,
 				CE9BD5B725072674005B9619 /* UIView+Extension.swift in Sources */,
 				CE93D1C2250446F70098327B /* Assets.swift in Sources */,
@@ -694,6 +698,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -754,6 +759,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -847,6 +853,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -927,6 +934,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1007,6 +1015,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1081,6 +1090,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
