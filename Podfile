@@ -10,4 +10,6 @@ target 'Mvvvm-demo' do
   pod 'AlamofireImage'
   pod 'MBProgressHUD'
   pod 'SwiftPullToRefresh'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end
