@@ -17,27 +17,14 @@ class HomeViewController: BaseViewController {
      private var movieList: [MovieModel] = []
     private var isLoadMore = false
     private let disposeBag = DisposeBag()
-
-       func bindViewModel() {
-           let page = PublishSubject<Int>()
-        let input = HomeViewModel.Input(page: page)
-        let output = homeViewModel?.fetchMovies(input)
-        output?.dataDriver.drive().
-        
-        output?.dataDriver.drive(moviesCollectionView.rx.items) { tableView, index, element in
-               var cell: MovieCell! // create and assign
-            cell.bindViewModel(viewModel: element, buttonClicked: page.asObserver())
-            return cell
-           }
-           .disposed(by: disposeBag)
-       }
+    private var currentPage = 0
+    private var totalPages = 0
     // MARK: - Public Variables
     
     // MARK: - IBOutletes
     @IBOutlet private weak var moviesCollectionView: UICollectionView!
     
     // MARK: - Computed Variables
-    //remove variable because there is one list only so put it in extension and methods
        lazy var refreshControl: UIRefreshControl = {
            let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .logoTextColor
@@ -53,13 +40,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setCollectionView()
-        bindViewModel()
-        //requestData()
-        
-//        fireMoviesListeners()
-//        fireMoviesDetailsListeners()
-//        postMovieRateSuccess()
-        
+        requestData(page: 1)
     }
     
     init(viewModel: HomeViewModel) {
@@ -76,18 +57,39 @@ class HomeViewController: BaseViewController {
 // MARK: - Private
 extension HomeViewController {
 
-    private func requestData() {
+    private func requestData(page: Int) {
         showLoader(view: self.view, type: .native)
         //send perpage
-//        output.dataDriver.drive(tableView.rx.items) { tableView, index, element in
-//                    var cell: TableViewCell! // create and assign
-//                    cell.bindViewModel(viewModel: element, buttonClicked: buttonClicked.asObserver())
-//                    return cell
-//                }
-//                .disposed(by: disposeBag)
-//
-//        // add this line you can provide the cell size from delegate method
-//        moviesCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        let result = homeViewModel?.fetchMovies(page: page)
+       
+        result?.subscribe(onNext: { (movies) in
+            self.currentPage = movies.page ?? 0
+            self.totalPages = movies.totalPages ?? 0
+            self.hideLoader()
+            if self.isLoadMore {
+                self.isLoadMore = false
+                self.movieList.append(contentsOf: movies.results ?? [])
+               //self?.listResponseObject = movies
+                self.moviesCollectionView.reloadData()
+                self.moviesCollectionView.spr_endRefreshing()
+                
+            } else {
+            self.moviesCollectionView.spr_endRefreshing()
+            self.refreshControl.endRefreshing()
+            UIView.animate(withDuration: 0.2, animations: {
+                self.movieList = movies.results ?? []
+                self.moviesCollectionView.reloadData()
+            }, completion: { _ in
+                self.movieList = movies.results ?? []
+                self.moviesCollectionView.reloadData()
+            })
+        }
+        }, onError: { (error) in
+            print(error)
+        }, onCompleted: {
+        }, onDisposed: {
+        }).disposed(by: disposeBag)
+    
     }
     
     private func setCollectionView() {
@@ -110,20 +112,19 @@ extension HomeViewController {
     
     @objc
        private func handlePullToRefresh(_ refreshControl: UIRefreshControl) {
-//           DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//            self.homeViewModel?.fetchMovies(1)
-//           }
+           DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.requestData(page: 1)
+           }
        }
     
     private func loadMore() {
 
-//        let currentPage = homeViewModel?.movies.value?.page ?? 0
-//        if currentPage < homeViewModel?.movies.value?.totalPages ?? 0 {
-//            isLoadMore = true
-//            homeViewModel?.fetchMovies(page: currentPage + 1)
-//        } else {
-//            moviesCollectionView.spr_endRefreshing()
-//        }
+        if currentPage < totalPages {
+            isLoadMore = true
+            requestData(page: currentPage + 1)
+        } else {
+            moviesCollectionView.spr_endRefreshing()
+        }
     }
 }
 
