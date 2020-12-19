@@ -21,4 +21,8 @@ struct MovieListsResponse<T: Codable>: Codable {
         case totalPages = "total_pages"
         case totalResults = "total_results"
     }
+    
+    init() {
+        
+    }
 }

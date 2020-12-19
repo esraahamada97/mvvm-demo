@@ -8,14 +8,29 @@
 
 import UIKit
 import SwiftPullToRefresh
-
+import RxSwift
+import RxCocoa
 class HomeViewController: BaseViewController {
     
     // MARK: - Private Variables
     private var homeViewModel: HomeViewModel?
      private var movieList: [MovieModel] = []
     private var isLoadMore = false
-    
+    private let disposeBag = DisposeBag()
+
+       func bindViewModel() {
+           let page = PublishSubject<Int>()
+        let input = HomeViewModel.Input(page: page)
+        let output = homeViewModel?.fetchMovies(input)
+        output?.dataDriver.drive().
+        
+        output?.dataDriver.drive(moviesCollectionView.rx.items) { tableView, index, element in
+               var cell: MovieCell! // create and assign
+            cell.bindViewModel(viewModel: element, buttonClicked: page.asObserver())
+            return cell
+           }
+           .disposed(by: disposeBag)
+       }
     // MARK: - Public Variables
     
     // MARK: - IBOutletes
@@ -38,10 +53,13 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setCollectionView()
-        fireMoviesListeners()
-        fireMoviesDetailsListeners()
-        postMovieRateSuccess()
-        requestData()
+        bindViewModel()
+        //requestData()
+        
+//        fireMoviesListeners()
+//        fireMoviesDetailsListeners()
+//        postMovieRateSuccess()
+        
     }
     
     init(viewModel: HomeViewModel) {
@@ -61,71 +79,17 @@ extension HomeViewController {
     private func requestData() {
         showLoader(view: self.view, type: .native)
         //send perpage
-        homeViewModel?.fetchMovies(page: 1)
-        homeViewModel?.fetchMovieDetails(movieId: 505)
-        homeViewModel?.postMovieRate(rate: 8)
+//        output.dataDriver.drive(tableView.rx.items) { tableView, index, element in
+//                    var cell: TableViewCell! // create and assign
+//                    cell.bindViewModel(viewModel: element, buttonClicked: buttonClicked.asObserver())
+//                    return cell
+//                }
+//                .disposed(by: disposeBag)
+//
+//        // add this line you can provide the cell size from delegate method
+//        moviesCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
     }
     
-    private func fireMoviesListeners() {
-        //rename methods
-        moviesSuccesListener()
-        moviesFailureListener()
-    }
-    
-    private func moviesSuccesListener() {
-        
-        homeViewModel?.movies.bind { [weak self] movies in
-            self?.hideLoader()
-            if self?.isLoadMore ?? true {
-                self?.isLoadMore = false
-                self?.movieList.append(contentsOf: movies.results ?? [])
-               //self?.listResponseObject = movies
-                self?.moviesCollectionView.reloadData()
-                self?.moviesCollectionView.spr_endRefreshing()
-                
-            } else {
-            self?.moviesCollectionView.spr_endRefreshing()
-            self?.refreshControl.endRefreshing()
-            UIView.animate(withDuration: 0.2, animations: {
-                self?.movieList = movies.results ?? []
-                self?.moviesCollectionView.reloadData()
-            }, completion: { _ in
-                self?.movieList = movies.results ?? []
-                self?.moviesCollectionView.reloadData()
-            })
-        }
-        }
-    }
-    
-    private func moviesFailureListener() {
-        
-        homeViewModel?.moviesError.bind { [weak self] error in
-            self?.showError(message: error.errorMessage() )
-            //check status code casses
-        }
-    }
-    
-    private func fireMoviesDetailsListeners() {
-        movieDetailsSuccesListener()
-        movieDetailsFailureListener()
-    }
-    
-    private func movieDetailsSuccesListener() {
-        homeViewModel?.movieDetails.bind { [weak self] _ in
-            self?.hideLoader()
-        }
-    }
-    
-    private func movieDetailsFailureListener() {
-        homeViewModel?.movieDetailsError.bind { [weak self] error in
-            self?.showError(message: error.errorMessage())
-        }
-    }
-    
-    private func postMovieRateSuccess () {
-//       homeViewModel?.postMovieRateMessage.bind { [weak self] message in
-//       }
-    }
     private func setCollectionView() {
            
            moviesCollectionView.dataSource = self
@@ -146,20 +110,20 @@ extension HomeViewController {
     
     @objc
        private func handlePullToRefresh(_ refreshControl: UIRefreshControl) {
-           DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.homeViewModel?.fetchMovies(page: 1)
-           }
+//           DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//            self.homeViewModel?.fetchMovies(1)
+//           }
        }
     
     private func loadMore() {
 
-        let currentPage = homeViewModel?.movies.value?.page ?? 0
-        if currentPage < homeViewModel?.movies.value?.totalPages ?? 0 {
-            isLoadMore = true
-            homeViewModel?.fetchMovies(page: currentPage + 1)
-        } else {
-            moviesCollectionView.spr_endRefreshing()
-        }
+//        let currentPage = homeViewModel?.movies.value?.page ?? 0
+//        if currentPage < homeViewModel?.movies.value?.totalPages ?? 0 {
+//            isLoadMore = true
+//            homeViewModel?.fetchMovies(page: currentPage + 1)
+//        } else {
+//            moviesCollectionView.spr_endRefreshing()
+//        }
     }
 }
 

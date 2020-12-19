@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 import Moya
 
 extension NetworkManager {
@@ -44,14 +45,40 @@ extension NetworkManager {
         }
     }
     
-    func fetch<T: Codable>(endPoint: TargetType, completion: @escaping(
-        _ result: Swift.Result< T,
-    NetworkError>,
-    _ statusCode: Int?) -> Void) {
-        
-        provider.request(MultiTarget(endPoint)) { result in
-            
-                self.parseResponse(moyaResult: result, completion: completion)
+    func fetch<T: Codable>(endPoint: TargetType) -> Observable<T> {
+        return Observable.create { (observer) -> Disposable in
+            self.provider.rx.request(MultiTarget(endPoint)).asObservable().subscribe { (response) in
+                do {
+                    
+                    let result = try JSONDecoder().decode(T.self, from: response.data)
+                    
+                    observer.onNext(result)
+                    observer.onCompleted()
+                } catch {
+                    observer.onError(error)
+                }
+            } onError: { (error) in
+                observer.onError(error)
+                
+            }
+           
         }
-    }
+        
+//    func fetch(endPoint: TargetType) -> Observable<Response> {
+//        return
+//            provider.rx
+//            .request(MultiTarget(endPoint)).asObservable()
+//    }
+//    func fetch<T: Codable>(endPoint: TargetType, completion: @escaping(
+//        _ result: Swift.Result< T,
+//    NetworkError>,
+//    _ statusCode: Int?) -> Void) {
+//
+//        provider.request(MultiTarget(endPoint)) { result in
+//
+//                self.parseResponse(moyaResult: result, completion: completion)
+//        }
+//    }
+    
+}
 }

@@ -12,4 +12,5 @@ target 'Mvvvm-demo' do
   pod 'SwiftPullToRefresh'
   pod 'RxSwift'
   pod 'RxCocoa'
+pod 'Moya/RxSwift'
 end

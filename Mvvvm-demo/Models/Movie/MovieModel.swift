@@ -21,4 +21,11 @@ struct MovieModel: Codable {
         case originalTitle = "original_title"
         case title = "title"
     }
+    
+    init ( movie: MovieModel) {
+        self.posterPath = movie.posterPath
+        movieID = movie.movieID
+        originalTitle = movie.originalTitle
+        title = movie.originalTitle
+    }
 }
